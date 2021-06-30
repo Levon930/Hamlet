@@ -1,0 +1,593 @@
+section {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 760px) {
+  section {
+    padding: 5px 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserratarm";
+}
+
+p,
+a {
+  font-family: "Montserratarm";
+  font-size: 20px;
+}
+
+p {
+  overflow: visible;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.buttons button {
+  height: 58px;
+  padding: 5px 30px;
+  position: relative;
+  font-family: "Montserratarm";
+  font: normal normal 900 20px Montserrat;
+  letter-spacing: 0px;
+  color: #002c84;
+  border: 3px solid #002c84;
+  border-radius: 22px;
+}
+
+#intro {
+  position: relative;
+  padding-bottom: 130px;
+}
+
+#intro .intro-star {
+  width: 420px;
+  position: absolute;
+  right: -210px;
+  top: 90px;
+}
+
+#intro .intro-star-border {
+  width: 420px;
+  position: absolute;
+  right: -210px;
+  top: 110px;
+}
+
+#intro .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: visible;
+  position: relative;
+  padding-left: 110px;
+  padding-right: 180px;
+}
+
+#intro .container .intro-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+#intro .container .intro-item-img {
+  position: absolute;
+  width: 29px;
+  left: -60px;
+  top: 100px;
+}
+
+#intro .container .intro-item .border-star {
+  position: absolute;
+  width: 233px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -75px;
+}
+
+#intro .container .intro-item-title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#intro .container .intro-item-title h1 {
+  font-size: 100px;
+  font-weight: 900;
+  text-align: left;
+  letter-spacing: 0px;
+  color: #002c84;
+}
+
+#intro .container .intro-img img {
+  position: absolute;
+}
+
+#about {
+  position: relative;
+  padding-bottom: 0;
+}
+
+#about .star-grey {
+  position: absolute;
+  width: 810px;
+  right: 0;
+  top: -40px;
+  z-index: -1;
+}
+
+#about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: visible;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 158px;
+}
+
+#about .container .about-block:first-child {
+  width: 55%;
+}
+
+#about .container .about-block:last-child {
+  width: 45%;
+}
+
+#about .container .about-block .about-item-img {
+  float: right;
+  width: 75%;
+  margin-right: 20px;
+}
+
+#about .container .about-block .about-item-img img {
+  width: 100%;
+}
+
+#about .container .about-block .about-item {
+  width: 95%;
+}
+
+#about .container .about-block .about-item h1 {
+  position: relative;
+  margin: 0 0 30px 0;
+  font: normal normal bold 24px/29px Montserrat arm;
+  letter-spacing: 0px;
+  color: #1d285e;
+}
+
+#about .container .about-block .about-item h1 img {
+  position: absolute;
+  width: 31px;
+  margin: 0;
+  left: -51px;
+}
+
+#about .container .about-block .about-item p {
+  margin: 0 0 60px 0;
+  font: normal normal normal 15px/19px Montserratarm;
+  letter-spacing: 0px;
+  color: #1d285e;
+}
+
+#infos {
+  padding-top: 0;
+  padding: 65px;
+}
+
+#infos .infos-block {
+  text-align: center;
+}
+
+#infos .infos-block img {
+  display: block;
+  margin: 0 auto;
+}
+
+#admins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 137px;
+}
+
+#admins .admins-title {
+  text-align: center;
+}
+
+#admins .admins-title h1 {
+  text-align: center;
+  font: bold normal normal 20px/33px Montserratarm;
+  letter-spacing: 0px;
+  color: #002c84;
+}
+
+#admins .admins-title p {
+  text-align: center;
+  font: normal normal normal 13.3px/19px Montserratarm;
+  letter-spacing: 0px;
+  color: #002c84;
+  margin-bottom: 40px;
+}
+
+#admins .card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#admins .card-block .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20%;
+}
+
+#admins .card-block .card img {
+  width: 170px;
+  height: 170px;
+}
+
+#admins .card-block .card-name {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal bold 27px/37px GHEA Grapalat;
+  letter-spacing: 0px;
+  color: #002c84;
+  margin-bottom: 12px;
+  width: 80%;
+}
+
+#admins .card-block .card-description {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal bold 8px/11px GHEA Grapalat;
+  letter-spacing: 0px;
+  color: #002c84;
+  margin-top: 0;
+  margin-bottom: 25px;
+  width: 65%;
+}
+
+#team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -webkit-box-flex: wrap;
+      -ms-flex: wrap;
+          flex: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+
+#team .team-title {
+  text-align: center;
+}
+
+#team .card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 60px;
+}
+
+#team .card-block .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+}
+
+#team .card-block .card img {
+  width: 257px;
+  height: 259px;
+}
+
+#team .card-block .card-name {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal bold 30px/40px GHEA Grapalat;
+  letter-spacing: 0px;
+  color: #002c84;
+  margin-bottom: 12px;
+  width: 80%;
+}
+
+#team .card-block .card-description {
+  text-transform: uppercase;
+  text-align: center;
+  font: normal normal bold 10px/17px GHEA Grapalat;
+  letter-spacing: 0px;
+  color: #002c84;
+  margin-top: 0;
+  margin-bottom: 25px;
+  width: 60%;
+}
+ #about .page2 {
+  margin-top: 0;
+  margin-left: 20px;
+} 
+.about_page2{
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  max-width: 1000px;
+  margin: auto 90px;
+}
+.iconsWithImageContainer div {
+  width:30%;
+ 
+  
+}
+.iconsWithImageContainer div img {
+  width: 100%;
+  
+}
+.iconsWithImageContainer{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+#buissUpHeading h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 139px;
+  line-height: 152px;
+  font-family: Montserrat;
+  color: #002C84;
+  letter-spacing: 0px;
+
+
+}
+#buissUpHeading h3 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 120px;
+  font-family: Montserrat;
+  color: #002C84;
+  letter-spacing: 0px;
+}
+#stepsSection{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content:space-around;
+
+}
+#stepsSection .content {
+  width: 50%;
+}
+.stepsDots>div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  box-sizing: border-box;
+ margin-bottom: 40px;
+
+}
+.stepsDots .activeDot , .activeDotDouble , .activeDotEnd  {
+  border: 2px solid #002C84;
+}
+
+.stepsDots>div>div {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D1D1D1;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: 600;
+  
+}
+
+
+.stepsDots .activeDot::after{
+  content: '';
+  position: absolute;
+  background-color: #002C84;
+  width: 2px;
+  height: 20px;
+  top: 100%;
+  left: 50%;
+}
+.stepsDots .activeDotDouble::after{
+  content: '';
+  position: absolute;
+  background-color: #002C84;
+  width: 2px;
+  height: 20px;
+  top: 100%;
+  left: 50%;
+}
+.stepsDots .activeDotDouble::before{
+  content: '';
+  position: absolute;
+  background-color: #002C84;
+  width: 2px;
+  height: 20px;
+  bottom: 100%;
+  left: 50%;
+}
+.stepsDots .dot::after{
+  content: '';
+  position: absolute;
+  background-color: #D1D1D1;
+  width: 2px;
+  height: 30px;
+  top: 85%;
+  left: 50%;
+}
+.stepsDots .dot1::after{
+  content: '';
+  position: absolute;
+  background-color: #D1D1D1;
+  width: 2px;
+  height: 30px;
+  top: 85%;
+  left: 50%;
+}
+.stepsDots .dot::before{
+  content: '';
+  position: absolute;
+  background-color: #D1D1D1;
+  width: 2px;
+  height: 30px;
+  bottom: 85%;
+  left: 50%;
+}
+.stepsDots .dotEnd::before{
+  content: '';
+  position: absolute;
+  background-color: #D1D1D1;
+  width: 2px;
+  height: 30px;
+  bottom: 85%;
+  left: 50%;
+}
+
+.stepsDots .activeDot div, .activeDotDouble div , .activeDotEnd div{
+  background-color: #002C84 !important;
+}
+.stepsDots .activeDotEnd::before{
+  content: '';
+  position: absolute;
+  background-color: #002C84;
+  width: 2px;
+  height: 20px;
+  bottom: 100%;
+  left: 50%;
+}
+#stepsSection .content h2{
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 47px;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #707070;
+}
+#stepsSection .content h3{
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 0px;
+  color: #002C84;
+}
+#stepsSection .content p{
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #080505;
+}
+
+/*# sourceMappingURL=index.css.map */
