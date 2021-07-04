@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink, Link } from "react-router-dom";
 import logo1 from "../../../static/img/logo1.svg";
 import "./header.css";
+import logo from "../../../static/img/comunity.svg";
 
 const Header = () => {
   return (
@@ -21,13 +22,23 @@ const Header = () => {
           <NavLink to="/" exact>
             <button className="subnavbtn">Community</button>
           </NavLink>
-          <div className="subnav-content">
-            <a href="#about">About</a>
-            <a href="#partners">Partners</a>
-            <a href="#mission">Mission</a>
-            <a href="#team">Team</a>
-            <a href="#mission">Mission</a>
-            <a href="#contact">Contact</a>
+          <div
+            className="subnav-content"
+            style={{ justifyContent: "space-around" }}
+          >
+            <div
+              className="logo-wrap"
+              style={{ display: "flex", justifyContent: "flex-start" }}
+            >
+              <img src={logo} alt="buissup logo" />
+            </div>
+            <div>
+              <a href="#intro">Գլխավոր</a>
+              <a href="#about">Մեր մասին</a>
+              <a href="#infos">Նպատակ</a>
+              <a href="#admins">Թիմ</a>
+              <a href="#contacts">Հետադարձ կապ</a>
+            </div>
           </div>
         </div>
         <div className="subnav">
@@ -35,12 +46,17 @@ const Header = () => {
             <button className="subnavbtn">Global Forum</button>
           </NavLink>
           <div className="subnav-content">
-            <a href="#link1">Link 7</a>
-            <a href="#link2">Link 8</a>
-            <a href="#link3">Link 9</a>
-            <a href="#link4">Link 10</a>
-            <a href="#link3">Link 11</a>
-            <a href="#link4">Link 12</a>
+            <div
+              className="logo-wrap"
+              style={{ display: "flex", justifyContent: "flex-start" }}
+            >
+              <img src={logo} alt="buissup logo" />
+            </div>
+            <a href="#intro">Գլխավոր</a>
+            <a href="#iconsWithImage">Ծրագրի մասին</a>
+            <a href="#buissUpHeading">ՈՒղղություններ</a>
+            <a href="#stepsSection">Մասնակցության ուղղեցույց</a>
+            <a href="#contacts">Հետադարձ կապ</a>
           </div>
         </div>
         <div className="subnav">
