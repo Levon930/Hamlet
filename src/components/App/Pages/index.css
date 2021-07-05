@@ -7,6 +7,10 @@ section {
         padding: 5px 0;
     }
 }
+@font-face {
+    font-family:'Montserratarm' ;
+    src: url(../../../static/fonts/Montserratarm-Regular.otf);
+}
 
 h1,
 h2,
@@ -369,13 +373,13 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 25%;
+    width: 20%;
     min-width: 200px;
 }
 
 #team .card-block .card img {
-    width: 257px;
-    height: 259px;
+    width: 170px;
+    height: 170px;
 }
 
 #team .card-block .card-name {

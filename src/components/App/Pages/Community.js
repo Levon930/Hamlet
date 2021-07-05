@@ -16,6 +16,7 @@ import member1 from "../../../static/img/member1.png";
 import member2 from "../../../static/img/member2.png";
 import member3 from "../../../static/img/member3.png";
 import member4 from "../../../static/img/member4.png";
+import member5 from "../../../static/img/Image@2x.png";
 import satelite from "../../../static/img/path.svg";
 import icon_1 from "../../../static/img/icons2/Group 155.svg";
 import icon_2 from "../../../static/img/icons2/Group 161.svg";
@@ -26,7 +27,7 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Community = () => {
+const Community = ({ history }) => {
   const styleIcon = { fontSize: "30px", color: "#0B3488" };
   const [show, setShow] = useState(0);
   return (
@@ -275,61 +276,62 @@ const Community = () => {
         <div className="card-block">
           <div className="card">
             <img src={person1} alt="preson" />
-            <h3 className="card-name">САМВЕЛ КАРАПЕТЯН</h3>
+            <h3 className="card-name">Սամվել Կարապետյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի նախագահ և հիմնադիր, «Տաշիր»
+              ընկերությունների խմբի հիմնադիր և սեփականատեր
             </p>
           </div>
 
           <div className="card">
             <img src={person2} alt="preson" />
-            <h3 className="card-name">Артур Джанибекян</h3>
+            <h3 className="card-name">Արթուր Ջանիբեկյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, Comedy Club Production-ի
+              հիմնադիր, «Գազպրոմ Մեդիա Հոլդինգ» ԲԸ ժամանցային հեռուստաալիքների
+              սուբհոլդինգի ղեկավարի առաջին տեղակալ
             </p>
           </div>
 
           <div className="card">
             <img src={person3} alt="preson" />
-            <h3 className="card-name">Камо Авагумян</h3>
+            <h3 className="card-name">ԿԱՄՈ ԱՎԱԳՈՒՄՅԱՆ</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի փոխնախագահ և հիմնադիր «Ավիլոն»
+              ընկերությունների խմբի տնօրենների խորհրդի նախագահ
             </p>
           </div>
 
           <div className="card">
             <img src={person4} alt="preson" />
-            <h3 className="card-name">Айк Игнатян</h3>
+            <h3 className="card-name">Հայկ Իգնաթյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Տաշիր» ընկերությունների
+              խմբի առաջին փոխնախագահ, «Ֆորա-Բանկ» ԲԱԲ տնօրենների խորհրդի նախագահ
             </p>
           </div>
           <div className="card">
             <img src={person5} alt="preson" />
-            <h3 className="card-name">Армен Шахазизян</h3>
+            <h3 className="card-name">Արմեն Շահազիզյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Լուդինգ» ընկերության
+              համահիմնադիր
             </p>
           </div>
           <div className="card">
             <img src={person6} alt="preson" />
-            <h3 className="card-name">Карен Авагумян</h3>
+            <h3 className="card-name">Կարեն Ավագումյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Ռանդ-Տրանս»
+              ընկերությունների խմբի տնօրենների խորհրդի նախագահ, NEBO.digital
             </p>
           </div>
           <div className="card">
             <img src={person7} alt="preson" />
-            <h3 className="card-name">Варужан Артенян</h3>
+            <h3 className="card-name">Վարուժան Արտենյան</h3>
             <p className="card-description">
-              ПРЕЗИДЕНТ И УЧРЕДИТЕЛЬ АССОЦИАЦИИ, ВЛАДЕЛЕЦ И ОСНОВАТЕЛЬ ГРУППЫ
-              КОМПАНИЙ «ТАШИР»
+              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Տաշիր» ընկերությունների
+              խմբի առաջին փոխնախագահ
             </p>
           </div>
         </div>
@@ -366,6 +368,13 @@ const Community = () => {
             <h3 className="card-name">Աննա Գրիգորյան</h3>
             <p className="card-description">
               Buissup Community-ի զարգացման և նորարարությունների գծով տնօրեն
+            </p>
+          </div>
+          <div className="card">
+            <img src={member5} alt="member" />
+            <h3 className="card-name">ՆԵԼԼԻ ՊԵՏՐՈՍՅԱՆ</h3>
+            <p className="card-description">
+              Buissup Global Forum-ի ծրագրային մենեջեր
             </p>
           </div>
         </div>

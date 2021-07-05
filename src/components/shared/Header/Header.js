@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   faFacebook,
   faInstagram,
@@ -12,6 +12,8 @@ import "./header.css";
 import logo from "../../../static/img/comunity.svg";
 
 const Header = () => {
+  const [activeCommunity, setActiveCommunity] = useState(true);
+  const [activeForum, setActiveForum] = useState(false);
   return (
     <header className="header">
       <div className="logo-wrap">
@@ -19,19 +21,30 @@ const Header = () => {
       </div>
       <div className="navbar">
         <div className="subnav">
-          <NavLink to="/" exact>
-            <button className="subnavbtn">Community</button>
+          <NavLink to="/" exact activeClassName="active">
+            <button
+              className="subnavbtn"
+              onClick={() => {
+                setActiveForum(false);
+                setActiveCommunity(true);
+              }}
+            >
+              Community
+            </button>
           </NavLink>
           <div
             className="subnav-content"
-            style={{ justifyContent: "space-around" }}
+            style={{
+              justifyContent: "space-around",
+              display: activeCommunity ? "flex" : "none",
+            }}
           >
-            <div
+            {/* <div
               className="logo-wrap"
               style={{ display: "flex", justifyContent: "flex-start" }}
             >
               <img src={logo} alt="buissup logo" />
-            </div>
+            </div> */}
             <div>
               <a href="#intro">Գլխավոր</a>
               <a href="#about">Մեր մասին</a>
@@ -42,16 +55,34 @@ const Header = () => {
           </div>
         </div>
         <div className="subnav">
-          <NavLink to="/globalForum">
-            <button className="subnavbtn">Global Forum</button>
+          <NavLink
+            to="/globalForum"
+            isActive={() => {
+              //setActiveCommunity(false);
+              // setActiveForum(true);
+            }}
+          >
+            <button
+              className="subnavbtn"
+              onClick={() => {
+                setActiveCommunity(false);
+                setActiveForum(true);
+                console.log(activeCommunity);
+              }}
+            >
+              Global Forum
+            </button>
           </NavLink>
-          <div className="subnav-content">
-            <div
+          <div
+            className="subnav-content"
+            style={{ display: activeForum ? "flex" : "none" }}
+          >
+            {/*  <div
               className="logo-wrap"
               style={{ display: "flex", justifyContent: "flex-start" }}
             >
               <img src={logo} alt="buissup logo" />
-            </div>
+            </div> */}
             <a href="#intro">Գլխավոր</a>
             <a href="#iconsWithImage">Ծրագրի մասին</a>
             <a href="#buissUpHeading">ՈՒղղություններ</a>

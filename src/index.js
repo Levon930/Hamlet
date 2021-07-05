@@ -9,12 +9,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
   <div className="content">
-    <main>
-      <Router>
-        <Header />
+    <Router>
+      <Header />
+      <main>
         <App />
-      </Router>
-    </main>
+      </main>
+    </Router>
+
     <Footer />
   </div>,
   document.getElementById("root")

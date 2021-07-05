@@ -1,4 +1,11 @@
 
+@font-face {
+  font-family:'Montserratarm' ;
+  src: url(../../../static/fonts/Montserratarm-Regular.otf);
+}
+span{
+  font-family: 'Montserratarm';
+}
 .footer-block {
   display: -webkit-box;
   display: -ms-flexbox;
