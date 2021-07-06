@@ -5,15 +5,16 @@ import businessItsYou from "../../../static/img/businessItsYou.svg";
 import borderStar from "../../../static/img/starWithBorder.svg";
 import redStar from "../../../static/img/redStar.svg";
 import satelite from "../../../static/img/path.svg";
-import one from "../../../static/img/1@2x.png";
-import two from "../../../static/img/2@2x.png";
-import tree from "../../../static/img/3@2x.png";
-import four from "../../../static/img/4.svg";
-import five from "../../../static/img/5@2x.png";
+import one from "../../../static/img/Сгруппировать 303.svg";
+import two from "../../../static/img/Сгруппировать 304.svg";
+import tree from "../../../static/img/Сгруппировать 305.svg";
+import four from "../../../static/img/Сгруппировать 306.svg";
+import five from "../../../static/img/Сгруппировать 307.svg";
 import oneIcon from "../../../static/img/icons/1.svg";
 import twoIcon from "../../../static/img/icons/2.svg";
 import treeIcon from "../../../static/img/icons/3.svg";
 import fourIcon from "../../../static/img/icons/4.svg";
+import buisap from "../../../static/img/BuissUp Global Forum-ի.svg";
 
 import { useState } from "react";
 const GlobalForum = () => {
@@ -85,6 +86,7 @@ const GlobalForum = () => {
               />
               <img
                 src={businessItsYou}
+                className="businessItsYou"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",
@@ -96,15 +98,22 @@ const GlobalForum = () => {
               />
             </div>
             <div className="buttons">
-              <button>Իմանալ ավելին</button>
+              <button>
+                <a
+                  className="liknkAdd"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeLjECvU04U5ImMBvsobLA221l_woRPUn6CPTdWlteTr-hPiA/viewform"
+                >
+                  Դիմի՛ր հիմա
+                </a>
+              </button>
             </div>
           </div>
         </div>
       </section>
       <section id="about" className="about_page2">
-        <img src={redStar} alt="redStar" />
+        <img src={redStar} alt="redStar" className="redStar" />
         <div className="about-item page2">
-          <h1>Ինչ որ ﬕ բան</h1>
+          <h1>Ծրագրի մասին</h1>
           <p>
             Buissup Global Forum մեկնարկը կտրվի Սեպտեմբերի 7-ին, Best Western
             Plus Dilijan հյուրանոցում։ Այն իրենից ներկայացնում է յոթօրյա
@@ -136,7 +145,9 @@ const GlobalForum = () => {
       </section>
       <section id="buissUpHeading">
         <h2>Ի՞նչ է պետք անել </h2>
-        <h3>BuissUp Global Forum-ի</h3>
+        <div>
+          <img src={buisap} />
+        </div>
         <h3>մասնակից դառնալու համար</h3>
       </section>
       <section id="stepsSection" className="stepsSection-mb">

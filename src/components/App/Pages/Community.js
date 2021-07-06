@@ -23,6 +23,8 @@ import icon_2 from "../../../static/img/icons2/Group 161.svg";
 import icon_3 from "../../../static/img/icons2/Group 162.svg";
 import icon_4 from "../../../static/img/icons2/Group 163.svg";
 import icon_5 from "../../../static/img/icons2/brain.svg";
+import text from "../../../static/img/biznes@duEs.svg";
+import tim from "../../../static/img/tim.svg";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -42,11 +44,9 @@ const Community = ({ history }) => {
             <img src={star} className="intro-item-img" alt="*" />
             <img src={borderStar} className="border-star" alt="borderStar" />
             <div className="intro-item-title">
-              <h1>
-                Բիզնեսը
-                <br />
-                դու ես
-              </h1>
+              <div style={{ width: "50%", marginTop: "70px" }}>
+                <img src={text} style={{ width: "100%" }} />
+              </div>
               <img
                 src={satelite}
                 alt="satelite"
@@ -72,6 +72,7 @@ const Community = ({ history }) => {
               />
               <img
                 src={businessItsYou}
+                className="businessItsYou"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",
@@ -83,7 +84,7 @@ const Community = ({ history }) => {
               />
             </div>
             <div className="buttons">
-              <button>Իմանալ ավելին</button>
+              <button className="moreInfo">Իմանալ ավելին</button>
             </div>
           </div>
         </div>
@@ -338,7 +339,9 @@ const Community = ({ history }) => {
       </section>
       <section id="team">
         <div className="team-title">
-          <h1>Թիմ</h1>
+          <div>
+            <img src={tim} />
+          </div>
         </div>
         <div className="card-block">
           <div className="card">

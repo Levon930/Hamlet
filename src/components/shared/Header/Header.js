@@ -8,16 +8,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink, Link } from "react-router-dom";
 import logo1 from "../../../static/img/logo1.svg";
+import logo2 from "../../../static/img/forum.svg";
+import logo3 from "../../../static/img/Untitled-6.svg";
 import "./header.css";
 import logo from "../../../static/img/comunity.svg";
 
 const Header = () => {
   const [activeCommunity, setActiveCommunity] = useState(true);
   const [activeForum, setActiveForum] = useState(false);
+  const styleIcon = { fontSize: "25px" };
   return (
     <header className="header">
       <div className="logo-wrap">
-        <img src={logo1} alt="buissup logo" />
+        <img src={activeForum ? logo3 : logo1} alt="buissup logo" />
       </div>
       <div className="navbar">
         <div className="subnav">
@@ -120,9 +123,9 @@ const Header = () => {
         </div>
       </div>
       <div className="soc-wrap">
-        <FontAwesomeIcon icon={faFacebook} />
-        <FontAwesomeIcon icon={faInstagram} />
-        <FontAwesomeIcon icon={faLinkedinIn} />
+        <FontAwesomeIcon icon={faFacebook} style={styleIcon} />
+        <FontAwesomeIcon icon={faInstagram} style={styleIcon} />
+        <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
       </div>
     </header>
   );
