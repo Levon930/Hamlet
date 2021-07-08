@@ -5,6 +5,11 @@ import {
   faMapMarkerAlt,
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 import "./footer.css";
 
@@ -27,6 +32,27 @@ const Footer = () => {
           <FontAwesomeIcon icon={faEnvelope} style={styleIcon} />
           <span>info@buissup.org</span>
         </div>
+        {/* <div className="footer-item">
+          <div className="soc-wrap">
+            <a href="https://www.facebook.com/Buissup">
+              <FontAwesomeIcon
+                icon={faFacebook}
+                style={styleIcon}
+                onClick={() =>
+                  window.history.href(
+                    "https://instagram.com/buissup.am?utm_medium=copy_link"
+                  )
+                }
+              />
+            </a>
+            <a href="https://instagram.com/buissup.am?utm_medium=copy_link">
+              <FontAwesomeIcon icon={faInstagram} style={styleIcon} />
+            </a>
+            <a href="https://www.linkedin.com/company/buissup">
+              <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
+            </a>
+          </div>
+        </div> */}
       </div>
     </footer>
   );

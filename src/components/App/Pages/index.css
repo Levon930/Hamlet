@@ -480,7 +480,7 @@ p {
     display: flex; 
     justify-content: center;
      width: 85%;
-    margin-left: 15%;
+   
 }
 #buissUpHeading h3 {
     text-align: center;
@@ -841,6 +841,9 @@ height: auto !important
 justify-content: space-between;
 width: 100%;
   }
+}
+.card-block{
+    align-items: flex-start !important;
 }
 
 /*# sourceMappingURL=index.css.map */

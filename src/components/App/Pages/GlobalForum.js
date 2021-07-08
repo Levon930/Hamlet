@@ -14,7 +14,7 @@ import oneIcon from "../../../static/img/icons/1.svg";
 import twoIcon from "../../../static/img/icons/2.svg";
 import treeIcon from "../../../static/img/icons/3.svg";
 import fourIcon from "../../../static/img/icons/4.svg";
-import buisap from "../../../static/img/BuissUp Global Forum-ի.svg";
+import buisap from "../../../static/img/Ի՞նչ_է_պետք_անելմասնակից_դառնալու_համար_01.svg";
 import text from "../../../static/img/biz.svg";
 
 import { useState } from "react";
@@ -73,7 +73,7 @@ const GlobalForum = () => {
                 alt="satelite"
                 style={{
                   position: "absolute",
-                  right: "-40%",
+                  right: "-408px",
                   width: "538px",
                   height: "516px",
                 }}
@@ -149,11 +149,14 @@ const GlobalForum = () => {
         </div>
       </section>
       <section id="buissUpHeading">
-        <h2>Ի՞նչ է պետք անել </h2>
+        {/* <h2>Ի՞նչ է պետք անել </h2>
         <div>
           <img src={buisap} />
         </div>
-        <h3>մասնակից դառնալու համար</h3>
+        <h3>մասնակից դառնալու համար</h3> */}
+        <div>
+          <img src={buisap} />
+        </div>
       </section>
       <section id="stepsSection" className="stepsSection-mb">
         <div className="stepsDots stepsDots-mb">

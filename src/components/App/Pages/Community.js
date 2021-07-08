@@ -23,7 +23,7 @@ import icon_2 from "../../../static/img/icons2/Group 161.svg";
 import icon_3 from "../../../static/img/icons2/Group 162.svg";
 import icon_4 from "../../../static/img/icons2/Group 163.svg";
 import icon_5 from "../../../static/img/icons2/brain.svg";
-import text from "../../../static/img/biznes@duEs.svg";
+import text from "../../../static/img/biznesDues.svg";
 import tim from "../../../static/img/tim.svg";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
@@ -130,7 +130,6 @@ const Community = ({ history }) => {
         <div className="infos-block infos-block-mb">
           <div>
             <div
-              className="info-circle"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(1);
@@ -138,13 +137,15 @@ const Community = ({ history }) => {
               }
               onMouseLeave={() => setShow(0)}
             >
-              {show === 1 ? (
-                <div className="circleText">
-                  <p>Առցանց բիզնես դասընթացների և սեմինարների անցկացում</p>
-                </div>
-              ) : (
-                <img src={icon_5} style={{ width: "40%" }} />
-              )}
+              <div className="info-circle">
+                {show === 1 ? (
+                  <div className="circleText">
+                    <p>Առցանց բիզնես դասընթացների և սեմինարների անցկացում</p>
+                  </div>
+                ) : (
+                  <img src={icon_5} style={{ width: "40%" }} />
+                )}
+              </div>
             </div>
 
             <div className="info-circle-text">
@@ -158,7 +159,6 @@ const Community = ({ history }) => {
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
             <div
-              className="info-circle"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(2);
@@ -166,21 +166,22 @@ const Community = ({ history }) => {
               }
               onMouseLeave={() => setShow(0)}
             >
-              {show === 2 ? (
-                <div className="circleText">
-                  <p>
-                    Ապահովել նախագծերի իրագործման և զարգացմեն համար անհրաժեշտ
-                    ներդրումներ
-                  </p>
-                </div>
-              ) : (
-                <img src={icon_2} />
-              )}
+              <div className="info-circle">
+                {show === 2 ? (
+                  <div className="circleText">
+                    <p>
+                      Ապահովել նախագծերի իրագործման և զարգացմեն համար անհրաժեշտ
+                      ներդրումներ
+                    </p>
+                  </div>
+                ) : (
+                  <img src={icon_2} />
+                )}
+              </div>
             </div>
           </div>
           <div>
             <div
-              className="info-circle"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(3);
@@ -188,16 +189,18 @@ const Community = ({ history }) => {
               }
               onMouseLeave={() => setShow(0)}
             >
-              {show === 3 ? (
-                <div className="circleText">
-                  <p>
-                    Ակումբը ձևավորում է հայ գործարարների բիզնես փորձի փոխանակման
-                    հարթակ
-                  </p>
-                </div>
-              ) : (
-                <img src={icon_1} />
-              )}
+              <div className="info-circle">
+                {show === 3 ? (
+                  <div className="circleText">
+                    <p>
+                      Ակումբը ձևավորում է հայ գործարարների բիզնես փորձի
+                      փոխանակման հարթակ
+                    </p>
+                  </div>
+                ) : (
+                  <img src={icon_1} />
+                )}
+              </div>
             </div>
 
             <div className="info-circle-text">
@@ -211,7 +214,6 @@ const Community = ({ history }) => {
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
             <div
-              className="info-circle"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(4);
@@ -219,21 +221,22 @@ const Community = ({ history }) => {
               }
               onMouseLeave={() => setShow(0)}
             >
-              {show === 4 ? (
-                <div className="circleText">
-                  <p>
-                    Ներդրումների շրջանակներում շեշտը կդրվի հայ երիտասարդների
-                    արդիական և նորարական գաղափարների զարգացման վրա
-                  </p>
-                </div>
-              ) : (
-                <img src={icon_3} />
-              )}
+              <div className="info-circle">
+                {show === 4 ? (
+                  <div className="circleText">
+                    <p>
+                      Ներդրումների շրջանակներում շեշտը կդրվի հայ երիտասարդների
+                      արդիական և նորարական գաղափարների զարգացման վրա
+                    </p>
+                  </div>
+                ) : (
+                  <img src={icon_3} />
+                )}
+              </div>
             </div>
           </div>
           <div>
             <div
-              className="info-circle"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(5);
@@ -241,16 +244,19 @@ const Community = ({ history }) => {
               }
               onMouseLeave={() => setShow(0)}
             >
-              {show === 5 ? (
-                <div className="circleText">
-                  <p>
-                    Կրթական և ներդրումային միջավայրի զարգացումը ոչ միայն կկանխի
-                    արտագաղթը, այլև կհանդիսանա հայրենադարձության ուժեղ ազդակ։
-                  </p>
-                </div>
-              ) : (
-                <img src={icon_4} />
-              )}
+              <div className="info-circle">
+                {show === 5 ? (
+                  <div className="circleText">
+                    <p>
+                      Կրթական և ներդրումային միջավայրի զարգացումը ոչ միայն
+                      կկանխի արտագաղթը, այլև կհանդիսանա հայրենադարձության ուժեղ
+                      ազդակ։
+                    </p>
+                  </div>
+                ) : (
+                  <img src={icon_4} />
+                )}
+              </div>
             </div>
 
             <div className="info-circle-text">
