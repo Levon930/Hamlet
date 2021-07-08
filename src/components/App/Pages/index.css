@@ -59,7 +59,8 @@ p {
     padding: 5px 30px;
     position: relative;
     font-family: "Montserratarm";
-    font: normal normal 900 20px Montserrat;
+    
+    
     letter-spacing: 0;
     color: #002c84;
     border: 3px solid #002c84;
@@ -214,7 +215,7 @@ p {
 #about .container .about-block .about-item h1 {
     position: relative;
     margin: 0 0 30px;
-    font: normal normal bold 24px/29px Montserrat arm;
+   
     letter-spacing: 0;
     color: #1d285e;
 }
@@ -228,7 +229,7 @@ p {
 
 #about .container .about-block .about-item p {
     margin: 0 0 60px;
-    font: normal normal normal 15px/19px Montserratarm;
+   
     letter-spacing: 0;
     color: #1d285e;
 }
@@ -267,14 +268,14 @@ p {
 
 #admins .admins-title h1 {
     text-align: center;
-    font: bold normal normal 20px/33px Montserratarm;
+   
     letter-spacing: 0;
     color: #002c84;
 }
 
 #admins .admins-title p {
     text-align: center;
-    font: normal normal normal 13.3px/19px Montserratarm;
+    
     letter-spacing: 0;
     color: #002c84;
     margin-bottom: 40px;
@@ -309,6 +310,7 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+   
     width: 20%;
     min-width: 200px;
    
@@ -461,7 +463,7 @@ p {
     font-weight: 900;
     font-size: 139px;
     line-height: 152px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     color: #002C84;
     letter-spacing: 0;
 
@@ -487,7 +489,7 @@ p {
     font-weight: 900;
     font-size: 90px;
     line-height: 120px;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     color: #002C84;
     letter-spacing: 0;
 }
@@ -664,6 +666,7 @@ p {
     padding: 10px;
 
 }
+
 .infos-block {
 
     display: flex;
@@ -699,7 +702,7 @@ background-image: url(../../../static/img/Untitled-3.svg);
 .info-circle-text > p,
 .info-circle-text-up > p {
   text-align: center;
-  font-family:Montserrat arm ;
+  
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -719,7 +722,7 @@ background-image: url(../../../static/img/Untitled-3.svg);
 
 }
 .info-circle:hover{
-  animation: coin-rotate 1s both ;
+  animation: coin-rotate 0.8s both ;
   
 }
 .info-circle:hover .circleText{
@@ -729,10 +732,10 @@ background-image: url(../../../static/img/Untitled-3.svg);
 
 .circleText>h3{
   text-align: center;
-  font-family:Montserrat arm ;
+  font-family:'Montserratarm'  ;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 12px;
   border-bottom:#4355B1 1px solid ;
 
  padding-bottom: 5px;
@@ -741,10 +744,10 @@ background-image: url(../../../static/img/Untitled-3.svg);
 }
 .circleText>p{
   text-align: center;
-  font-family:Montserrat arm ;
+  font-family:'Montserratarm' ;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
 
 
 
@@ -844,6 +847,10 @@ width: 100%;
 }
 .card-block{
     align-items: flex-start !important;
+}
+.card h3{
+    font-family:'Montserratarm'!important;
+    font-size: 22px !important;
 }
 
 /*# sourceMappingURL=index.css.map */

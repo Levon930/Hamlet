@@ -124,7 +124,12 @@
   color: #0b3488;
   text-decoration: none;
 }
-
+.info-circle-text p ,.info-circle-text-up p{
+font-size: 17px;
+}
+.circleText{
+  width: 97%;
+}
 /* .subnav-content a:hover {
   background-color: #eee;
   color: black;

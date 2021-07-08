@@ -146,22 +146,21 @@ const Header = () => {
         </div>
       </div>
       <div className="soc-wrap">
-        <a href="https://www.facebook.com/Buissup">
-          <FontAwesomeIcon
-            icon={faFacebook}
-            style={styleIcon}
-            onClick={() =>
-              window.history.href(
-                "https://instagram.com/buissup.am?utm_medium=copy_link"
-              )
-            }
-          />
+        <a href="https://www.facebook.com/Buissup" target="_blank">
+          <FontAwesomeIcon icon={faFacebook} style={styleIcon} />
         </a>
-        <a href="https://instagram.com/buissup.am?utm_medium=copy_link">
+        <a
+          href="https://instagram.com/buissup.am?utm_medium=copy_link"
+          target="_blank"
+        >
           <FontAwesomeIcon icon={faInstagram} style={styleIcon} />
         </a>
         <a href="https://www.linkedin.com/company/buissup">
-          <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
+          <FontAwesomeIcon
+            icon={faLinkedinIn}
+            style={styleIcon}
+            target="_blank"
+          />
         </a>
       </div>
     </header>

@@ -155,7 +155,7 @@ const Community = ({ history }) => {
           </div>
           <div>
             <div className="info-circle-text-up">
-              <p>Ներդրումների ներգրավվում՝</p>
+              <p>Ներդրումների ներգրավվում</p>
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
             <div

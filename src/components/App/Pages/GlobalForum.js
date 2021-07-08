@@ -106,6 +106,7 @@ const GlobalForum = () => {
               <button>
                 <a
                   className="liknkAdd"
+                  target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeLjECvU04U5ImMBvsobLA221l_woRPUn6CPTdWlteTr-hPiA/viewform"
                 >
                   Դիմի՛ր հիմա
