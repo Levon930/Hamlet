@@ -15,6 +15,7 @@ import twoIcon from "../../../static/img/icons/2.svg";
 import treeIcon from "../../../static/img/icons/3.svg";
 import fourIcon from "../../../static/img/icons/4.svg";
 import buisap from "../../../static/img/BuissUp Global Forum-ի.svg";
+import text from "../../../static/img/biz.svg";
 
 import { useState } from "react";
 const GlobalForum = () => {
@@ -58,11 +59,15 @@ const GlobalForum = () => {
             <img src={star} className="intro-item-img" alt="*" />
             <img src={borderStar} className="border-star" alt="borderStar" />
             <div className="intro-item-title">
-              <h1 style={{ fontSize: "80px", marginBottom: "100px" }}>
-                Գաղափարից
-                <br />
-                դեպի իրագործում
-              </h1>
+              <div
+                style={{
+                  width: "70%",
+                  paddingBottom: "100px",
+                  paddingTop: "70px",
+                }}
+              >
+                <img src={text} style={{ width: "100%", height: "100%" }} />
+              </div>
               <img
                 src={satelite}
                 alt="satelite"

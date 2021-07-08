@@ -84,7 +84,7 @@ const Community = ({ history }) => {
               />
             </div>
             <div className="buttons">
-              <button className="moreInfo">Իմանալ ավելին</button>
+              {/* <button className="moreInfo">Իմանալ ավելին</button> */}
             </div>
           </div>
         </div>
@@ -355,8 +355,8 @@ const Community = ({ history }) => {
             <img src={member2} alt="member" />
             <h3 className="card-name">Համլետ Ասատրյան</h3>
             <p className="card-description">
-              Ռուսաստանում «Հայ գործարաների ասոցիացիա»-ի հայաստանյան գրասենյակի
-              տնօրեն
+              ՌՈՒՍԱՍՏԱՆՈՒՄ «ՀԱՅ ԳՈՐԾԱՐԱՆԵՐԻ ԱՍՈՑԻԱՑԻԱ»-Ի ՀԱՅԱՍՏԱՆՅԱՆ ԳՐԱՍԵՆՅԱԿԻ
+              ՂԵԿԱՎԱՐ
             </p>
           </div>
           <div className="card">
@@ -370,7 +370,7 @@ const Community = ({ history }) => {
             <img src={member4} alt="member" />
             <h3 className="card-name">Աննա Գրիգորյան</h3>
             <p className="card-description">
-              Buissup Community-ի զարգացման և նորարարությունների գծով տնօրեն
+              Buissup Community-ի զարգացման գծով պատասխանատու
             </p>
           </div>
           <div className="card">

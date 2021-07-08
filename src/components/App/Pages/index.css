@@ -51,7 +51,7 @@ p {
 
 .buttons>button:hover .liknkAdd{
     color: white ;
-    transition-duration: 1s;
+    transition-duration: 0.2s;
 }
 
 .buttons button {
@@ -68,7 +68,7 @@ p {
 .buttons button:hover{
     background-color: #002C84;
     color: #FFFFFF;
-    transition-duration: 1s;
+    transition-duration: 0.2s;
 }
 
 #intro {
@@ -289,6 +289,7 @@ p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    align-content: flex-start;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -439,9 +440,9 @@ p {
     margin-top: 18px;
 }
 .iconsWithImageContainer div {
-    width: 25%;
+    width: 20%;
     min-width: 200px;
-    margin: 20px;
+    padding: 40px;
 
 }
 .iconsWithImageContainer div img {
@@ -772,6 +773,9 @@ background-image: url(../../../static/img/Untitled-3.svg);
     transform: rotateY(180deg);
   }
 }
+.infos-block-mb{
+    background: none;
+  }
 @media screen and (max-width: 1200px) {
   .infos-block-mb{
     background: none;
