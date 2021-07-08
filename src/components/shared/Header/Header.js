@@ -54,7 +54,6 @@ const Header = () => {
               top: activeLogo ? 0 : "80px",
             }}
           >
-            {console.log(activeLogo)}
             {activeLogo ? (
               <div
                 className="logo-wrap"
@@ -63,7 +62,7 @@ const Header = () => {
                 <img src={logo} />
               </div>
             ) : null}
-            <div>
+            <div className="subMenu">
               <a href="#intro">Գլխավոր</a>
               <a href="#about">Մեր մասին</a>
               <a href="#infos">Նպատակ</a>
@@ -109,11 +108,13 @@ const Header = () => {
                 <img src={logo2} alt="buissup logo" />
               </div>
             ) : null}
-            <a href="#intro">Գլխավոր</a>
-            <a href="#iconsWithImage">Ծրագրի մասին</a>
-            <a href="#buissUpHeading">ՈՒղղություններ</a>
-            <a href="#stepsSection">Մասնակցության ուղղեցույց</a>
-            <a href="#contacts">Հետադարձ կապ</a>
+            <div className="subMenu">
+              <a href="#intro">Գլխավոր</a>
+              <a href="#about">Ծրագրի մասին</a>
+              <a href="#iconsWithImage">ՈՒղղություններ</a>
+              <a href="#stepsSection">Մասնակցության ուղղեցույց</a>
+              <a href="#contacts">Հետադարձ կապ</a>
+            </div>
           </div>
         </div>
         <div className="subnav">
@@ -131,7 +132,7 @@ const Header = () => {
           </div>
         </div>
         <div className="subnav">
-          <NavLink to="/accelerator">
+          {/* <NavLink to="/accelerator">
             {" "}
             <button className="subnavbtn">Accelerator</button>
           </NavLink>
@@ -142,7 +143,7 @@ const Header = () => {
             <a href="#link4">Link 22</a>
             <a href="#link3">Link 23</a>
             <a href="#link4">Link 24</a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="soc-wrap">
@@ -155,12 +156,8 @@ const Header = () => {
         >
           <FontAwesomeIcon icon={faInstagram} style={styleIcon} />
         </a>
-        <a href="https://www.linkedin.com/company/buissup">
-          <FontAwesomeIcon
-            icon={faLinkedinIn}
-            style={styleIcon}
-            target="_blank"
-          />
+        <a href="https://www.linkedin.com/company/buissup" target="_blank">
+          <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
         </a>
       </div>
     </header>

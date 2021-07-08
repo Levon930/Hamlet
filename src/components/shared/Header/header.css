@@ -42,7 +42,7 @@
 }
 
 .header .navbar {
-  width: 64%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +65,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+          padding: 20px;
 }
 
 .header .soc-wrap svg path {

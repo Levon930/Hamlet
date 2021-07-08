@@ -5,6 +5,10 @@
 }
 span{
   font-family: 'Montserratarm';
+  font-size: 15px;
+}
+*{
+  font-family: 'Montserratarm';
 }
 .footer-block {
   display: -webkit-box;
@@ -15,7 +19,7 @@ span{
 }
 
 .footer-block .footer-item {
-  padding: 43px 80px;
+  padding: 20px 40px;
 }
 .footer-item{
   display: flex;
@@ -27,6 +31,11 @@ span{
 }
 .footer-item span{
   padding-left: 10px;
+  color: #002C84;
+  font-family: 'Montserratarm' !important;
+}
+.soc-wrap a{
+  padding: 10px;
   color: #002C84;
 }
 @media screen and (max-width: 760px) {

@@ -15,7 +15,7 @@ import person7 from "../../../static/img/preson7.png";
 import member1 from "../../../static/img/member1.png";
 import member2 from "../../../static/img/member2.png";
 import member3 from "../../../static/img/member3.png";
-import member4 from "../../../static/img/member4.png";
+import member4 from "../../../static/img/Anna.png";
 import member5 from "../../../static/img/Image@2x.png";
 import satelite from "../../../static/img/path.svg";
 import icon_1 from "../../../static/img/icons2/Group 155.svg";
@@ -24,6 +24,7 @@ import icon_3 from "../../../static/img/icons2/Group 162.svg";
 import icon_4 from "../../../static/img/icons2/Group 163.svg";
 import icon_5 from "../../../static/img/icons2/brain.svg";
 import text from "../../../static/img/biznesDues.svg";
+
 import tim from "../../../static/img/tim.svg";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
@@ -102,7 +103,7 @@ const Community = ({ history }) => {
                 Տեսլական
               </h1>
               <p>
-                BuissUp Community-ն բիզնես ակումբ է գաղափարի հիմքում ընկած է
+                Buissup Community-ն բիզնես ակումբ է գաղափարի հիմքում ընկած է
                 ՀՀ-ում առողջ բիզնես միջավայրի ստեղծումը և զարգացումը` կրթական
                 ծրագրերի, խորհրդատվական ծառայությունների և ֆինանսական միջոցների
                 ներգրավվման միջոցով: Կրթական ուղղությունը Ասոցիացիայի առանցքային
@@ -114,7 +115,7 @@ const Community = ({ history }) => {
                 Առաքելություն
               </h1>
               <p>
-                BuissUp Community–ի հիմնական առաքելությունը ՀՀ գործարար ներուժի
+                Buissup Community–ի հիմնական առաքելությունը ՀՀ գործարար ներուժի
                 բացահայտումն է ինչպես նաև դրա իրացումն ու զարգացումը:
               </p>
             </div>
@@ -133,7 +134,7 @@ const Community = ({ history }) => {
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(1);
-                }, 800)
+                }, 600)
               }
               onMouseLeave={() => setShow(0)}
             >
@@ -162,7 +163,7 @@ const Community = ({ history }) => {
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(2);
-                }, 800)
+                }, 600)
               }
               onMouseLeave={() => setShow(0)}
             >
@@ -185,7 +186,7 @@ const Community = ({ history }) => {
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(3);
-                }, 800)
+                }, 600)
               }
               onMouseLeave={() => setShow(0)}
             >
@@ -217,7 +218,7 @@ const Community = ({ history }) => {
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(4);
-                }, 800)
+                }, 600)
               }
               onMouseLeave={() => setShow(0)}
             >
@@ -240,7 +241,7 @@ const Community = ({ history }) => {
               onMouseEnter={() =>
                 setTimeout(() => {
                   setShow(5);
-                }, 800)
+                }, 600)
               }
               onMouseLeave={() => setShow(0)}
             >
@@ -269,7 +270,7 @@ const Community = ({ history }) => {
       <section id="admins">
         <div className="admins-title">
           <h1>
-            BuissUp Global Forum-ը իրականացվում է Ռուսաստանում «Հայ գործարաների
+            Buissup Global Forum-ը իրականացվում է Ռուսաստանում «Հայ գործարաների
             ասոցիացիա»-ի հիմնադիրների նախաձեռնությամբ։
           </h1>
           <p>

@@ -504,6 +504,7 @@ p {
 }
 #stepsSection .content {
     width: 50%;
+    font-family: "Montserrat";
 }
 .stepsDots > div {
     width: 50px;

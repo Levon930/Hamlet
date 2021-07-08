@@ -24,35 +24,30 @@ const Footer = () => {
             ք․Երևան, Գ․ Լուսավորիչ 9, «Երևան Պլազա» բիզնես-կենտրոն
           </span>
         </div>
-        <div className="footer-item">
+        {/* <div className="footer-item">
           <FontAwesomeIcon icon={faPhone} style={styleIcon} />
           <span>+374 (44) 888 888</span>
-        </div>
+        </div> */}
         <div className="footer-item">
           <FontAwesomeIcon icon={faEnvelope} style={styleIcon} />
           <span>info@buissup.org</span>
         </div>
-        {/* <div className="footer-item">
+        <div className="footer-item">
           <div className="soc-wrap">
-            <a href="https://www.facebook.com/Buissup">
-              <FontAwesomeIcon
-                icon={faFacebook}
-                style={styleIcon}
-                onClick={() =>
-                  window.history.href(
-                    "https://instagram.com/buissup.am?utm_medium=copy_link"
-                  )
-                }
-              />
+            <a href="https://www.facebook.com/Buissup" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} style={styleIcon} />
             </a>
-            <a href="https://instagram.com/buissup.am?utm_medium=copy_link">
+            <a
+              href="https://instagram.com/buissup.am?utm_medium=copy_link"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faInstagram} style={styleIcon} />
             </a>
-            <a href="https://www.linkedin.com/company/buissup">
+            <a href="https://www.linkedin.com/company/buissup" target="_blank">
               <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
             </a>
           </div>
-        </div> */}
+        </div>
       </div>
     </footer>
   );
