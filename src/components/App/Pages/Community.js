@@ -31,7 +31,7 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Community = ({ history }) => {
-  const styleIcon = { fontSize: "30px", color: "#0B3488" };
+  const styleIcon = { fontSize: "25px", color: "#0B3488" };
   const [show, setShow] = useState(0);
   return (
     <>
@@ -43,9 +43,13 @@ const Community = ({ history }) => {
         <div className="container">
           <div className="intro-item">
             <img src={star} className="intro-item-img" alt="*" />
-            <img src={borderStar} className="border-star" alt="borderStar" />
+            <img
+              src={borderStar}
+              className="border-star mobileNone"
+              alt="borderStar"
+            />
             <div className="intro-item-title">
-              <div style={{ width: "50%", marginTop: "70px" }}>
+              <div className="headerText">
                 <img src={text} style={{ width: "100%" }} />
               </div>
               <img
@@ -53,11 +57,12 @@ const Community = ({ history }) => {
                 alt="satelite"
                 style={{
                   position: "absolute",
+
                   right: "-408px",
                   width: "538px",
                   height: "516px",
                 }}
-                className="sateliteStar"
+                className="sateliteStar mobileNone"
               />
               <img
                 src={borderStar}
@@ -69,11 +74,11 @@ const Community = ({ history }) => {
                   top: "5%",
                   height: "516px",
                 }}
-                className="sateliteStar"
+                className="sateliteStar mobileNone"
               />
               <img
                 src={businessItsYou}
-                className="businessItsYou"
+                className="businessItsYou mobileNone"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",
@@ -120,7 +125,7 @@ const Community = ({ history }) => {
               </p>
             </div>
           </div>
-          <div className="about-block">
+          <div className="about-block mobNone">
             <div className="about-item-img">
               <img src={aboutImg} alt="aboutImg" />
             </div>

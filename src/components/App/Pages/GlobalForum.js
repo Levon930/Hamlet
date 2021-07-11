@@ -63,10 +63,15 @@ const GlobalForum = () => {
       <section id="intro">
         <div className="container">
           <div className="intro-item">
-            <img src={star} className="intro-item-img" alt="*" />
-            <img src={borderStar} className="border-star" alt="borderStar" />
+            <img src={star} className="intro-item-img mobileNone" alt="*" />
+            <img
+              src={borderStar}
+              className="border-star mobileNone"
+              alt="borderStar"
+            />
             <div className="intro-item-title">
               <div
+                className="intro-item-title-text"
                 style={{
                   width: "70%",
                   paddingBottom: "100px",
@@ -84,6 +89,7 @@ const GlobalForum = () => {
                   width: "538px",
                   height: "516px",
                 }}
+                className="mobileNone"
               />
               <img
                 src={borderStar}
@@ -95,10 +101,11 @@ const GlobalForum = () => {
                   top: "5%",
                   height: "516px",
                 }}
+                className="mobileNone"
               />
               <img
                 src={businessItsYou}
-                className="businessItsYou"
+                className="businessItsYou mobileNone"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",

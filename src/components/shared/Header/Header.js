@@ -4,6 +4,7 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 //import * as Scroll from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +20,7 @@ const Header = () => {
   const [activeForum, setActiveForum] = useState(false);
   const [activeLogo, setActiveLogo] = useState(false);
   const styleIcon = { fontSize: "22px" };
+  const styleMobileIcon = { fontSize: "14px" };
   window.addEventListener("scroll", (e) => {
     if (window.scrollY >= 80) {
       setActiveLogo(true);
@@ -32,7 +34,8 @@ const Header = () => {
       <div className="logo-wrap">
         <img src={activeForum ? logo3 : logo1} alt="buissup logo" />
       </div>
-      <div className="navbar">
+
+      <div className="navbar ">
         <div className="subnav">
           <NavLink to="/" exact activeClassName="active">
             <button
@@ -120,7 +123,7 @@ const Header = () => {
         <div className="subnav">
           <NavLink to="/conference">
             {" "}
-            <button className="subnavbtn">Conference</button>
+            <button className="subnavbtn mobileNone">Conference</button>
           </NavLink>
           <div className="subnav-content">
             <a href="#link1">Link 13</a>
@@ -146,7 +149,7 @@ const Header = () => {
           </div> */}
         </div>
       </div>
-      <div className="soc-wrap">
+      <div className="soc-wrap mobileNone">
         <a href="https://www.facebook.com/Buissup" target="_blank">
           <FontAwesomeIcon icon={faFacebook} style={styleIcon} />
         </a>
@@ -159,6 +162,61 @@ const Header = () => {
         <a href="https://www.linkedin.com/company/buissup" target="_blank">
           <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
         </a>
+      </div>
+      <div className="mobileContainer">
+        <button className="mobileButton">
+          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
+        </button>
+        <div className="mobileMenu">
+          <NavLink to="/" exact activeClassName="active">
+            <button
+              className="subnavbtn"
+              onClick={() => {
+                setActiveForum(false);
+                setActiveCommunity(true);
+              }}
+            >
+              Community
+            </button>
+          </NavLink>
+
+          <NavLink
+            to="/globalForum"
+            isActive={() => {
+              //setActiveCommunity(false);
+              // setActiveForum(true);
+            }}
+          >
+            <button
+              className="subnavbtn"
+              onClick={() => {
+                setActiveCommunity(false);
+                setActiveForum(true);
+                console.log(activeCommunity);
+              }}
+            >
+              Global Forum
+            </button>
+          </NavLink>
+          <NavLink to="/conference">
+            {" "}
+            <button className="subnavbtn">Conference</button>
+          </NavLink>
+          <div className="soc-wrap-mobile">
+            <a href="https://www.facebook.com/Buissup" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} style={styleMobileIcon} />
+            </a>
+            <a
+              href="https://instagram.com/buissup.am?utm_medium=copy_link"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faInstagram} style={styleMobileIcon} />
+            </a>
+            <a href="https://www.linkedin.com/company/buissup" target="_blank">
+              <FontAwesomeIcon icon={faLinkedinIn} style={styleMobileIcon} />
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   );

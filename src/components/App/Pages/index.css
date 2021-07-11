@@ -312,7 +312,7 @@ p {
     justify-content: center;
    
     width: 20%;
-    min-width: 200px;
+  
    
 }
 
@@ -397,7 +397,7 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
     width: 20%;
-    min-width: 200px;
+   
 }
 
 #team .card-block .card img {
@@ -655,8 +655,8 @@ p {
     width: 60%;
 }
 .info-circle {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -759,6 +759,10 @@ background-image: url(../../../static/img/Untitled-3.svg);
     animation: rotate 10s both infinite;
 }
 
+.headerText{
+    width: 50%;
+     margin-top: 70px
+}
 @keyframes rotate {
     from {
       transform: rotateZ(0);
@@ -794,6 +798,123 @@ background-image: url(../../../static/img/Untitled-3.svg);
    
     width: 100%;
     
+  }
+  .headerText{
+      width: 100%;
+  }
+  .about-item img {
+      width: 20px;
+      left: -10px;
+  }
+  #about .container {
+      padding-left: 0;
+      width: 100%;
+      justify-content: center;
+  }
+  .about-block{
+      width: 87% !important;
+  }
+
+  .card{
+      width: 40% !important;
+      margin: 5px;
+
+  }
+  .card h1{
+      font-size: 15px;
+  }
+  
+
+#admins{
+    padding: 0 10px;
+    
+}
+.admins-title>h1{
+    font-size: 15px;
+}
+.admins-title>p{
+font-size: 13px;
+}
+  .mobNone{
+      display: none;
+  }
+  .info-circle{
+width: 100px;
+height: 100px;
+  }
+  .info-circle-text{
+      font-size: 13px;
+  }
+  .stepsDots .activeDotEnd::before {
+   
+    height: 10px;
+    
+}
+.stepsDots .activeDot::after {
+    content: '';
+    position: absolute;
+    background-color: #002C84;
+    width: 2px;
+    height: 20px;
+    top: 100%;
+    left: 50%;
+}
+.stepsDots .activeDotDouble::after {
+    content: '';
+    position: absolute;
+    background-color: #002C84;
+    width: 2px;
+    height: 20px;
+    top: 100%;
+    left: 50%;
+}
+.footer-item {
+    width: 100% !important;
+    justify-content: end !important;
+}
+.about_page2{
+    margin: 0 10px;
+}
+#stepsSection .content {
+    width:90%;
+}
+.stepsDots .activeDotDouble::before {
+   
+    height: 10px;
+   
+}
+.stepsDots .dot::after {
+ 
+    height: 10px;
+  
+}
+.stepsDots .dot1::after {
+   
+    height: 10px;
+   
+}
+.stepsDots .dot::before {
+
+    height: 10px;
+   
+}
+.stepsDots .dotEnd::before {
+    
+    height: 10px;
+    
+}
+.about-item img {
+    width: 20px !important;
+    left: -20px !important;
+}
+.about-item p {
+    font-size: 12px;
+
+
+}
+  .border-star{
+      
+
   }
 
 
@@ -842,7 +963,7 @@ height: auto !important
   }
  
   #admins .card-block {
-justify-content: space-between;
+justify-content: space-evenly;
 width: 100%;
   }
 }
@@ -854,4 +975,28 @@ width: 100%;
     font-size: 22px !important;
 }
 
+
 /*# sourceMappingURL=index.css.map */
+@media screen and (max-width: 760px) {
+    .card>h3{
+        font-size: 15px !important;
+
+    }
+    .card >p {
+        font-size: 12px;
+    }
+    .card-block{
+        width: 100%;
+        justify-content: space-evenly !important
+    }
+    .card>img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    #team{
+        padding: 0;
+    }
+    .intro-item-title-text {
+        width: 100% !important;
+    }
+}
