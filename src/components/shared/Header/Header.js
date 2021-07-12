@@ -49,7 +49,7 @@ const Header = () => {
             </button>
           </NavLink>
           <div
-            className="subnav-content"
+            className="subnav-content mobileNone"
             style={{
               justifyContent: "space-around",
               display: activeCommunity ? "flex" : "none",
@@ -94,7 +94,7 @@ const Header = () => {
             </button>
           </NavLink>
           <div
-            className="subnav-content"
+            className="subnav-content mobileNone"
             style={{
               display: activeForum ? "flex" : "none",
               justifyContent: "center",
@@ -111,7 +111,7 @@ const Header = () => {
                 <img src={logo2} alt="buissup logo" />
               </div>
             ) : null}
-            <div className="subMenu">
+            <div className="subMenu ">
               <a href="#intro">Գլխավոր</a>
               <a href="#about">Ծրագրի մասին</a>
               <a href="#iconsWithImage">ՈՒղղություններ</a>
@@ -125,7 +125,7 @@ const Header = () => {
             {" "}
             <button className="subnavbtn mobileNone">Conference</button>
           </NavLink>
-          <div className="subnav-content">
+          <div className="subnav-content mobileNone">
             <a href="#link1">Link 13</a>
             <a href="#link2">Link 14</a>
             <a href="#link3">Link 15</a>
