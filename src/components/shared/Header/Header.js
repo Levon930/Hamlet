@@ -2,14 +2,13 @@ import React, { useState, useContext } from "react";
 import { Context } from "../../../context";
 import localizeFilter from '../../../locale/localize.filter'
 import { useLocation } from 'react-router-dom'
+import { Select } from "antd";
+import { Armenia, USA, Russia } from "../../Icons";
 import {
   faFacebook,
   faInstagram,
-  faLinkedinIn,
+  faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-//import * as Scroll from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import logo1 from "../../../static/img/logo1.svg";
@@ -17,30 +16,29 @@ import logo2 from "../../../static/img/forum.svg";
 import logo3 from "../../../static/img/Group 2qqw.svg";
 import "./header.css";
 import logo from "../../../static/img/comunity.svg";
+import 'antd/dist/antd.css'
+
+const { Option } = Select;
 
 const Header = () => {
   const location = useLocation();
-  const { lang } = useContext(Context);
+  const { lang, setLang } = useContext(Context);
   const [activeCommunity, setActiveCommunity] = useState(true);
   const [activeForum, setActiveForum] = useState(false);
   const [activeLogo, setActiveLogo] = useState(false);
   const styleIcon = { fontSize: "22px" };
-  const styleMobileIcon = { fontSize: "14px" };
-  // window.addEventListener("scroll", (e) => {
-  //   if (window.scrollY >= 80) {
-  //     setActiveLogo(true);
-  //   } else if (window.scrollY < 80) {
-  //     setActiveLogo(false);
-  //   }
-  // });
-  // console.log(location)
+
+  const handleChange = (value) => {
+      setLang(value);
+  }
+
   return (
     <header className="header">
       <div className="logo-wrap">
         <img src={activeForum ? logo3 : logo1} alt="buissup logo" />
       </div>
 
-      <div className="navbar ">
+      <div className="navbar mobileNone">
         <div className="subnav">
           <NavLink to="/" exact activeClassName="active">
             <button
@@ -50,7 +48,7 @@ const Header = () => {
                 setActiveCommunity(true);
               }}
             >
-              Community
+              {localizeFilter(lang, 'community') || "Community"}
             </button>
           </NavLink>
           <div
@@ -91,7 +89,7 @@ const Header = () => {
                 console.log(activeCommunity);
               }}
             >
-              Global Forum
+              {localizeFilter(lang, 'global forum') || "Global Forum"}
             </button>
           </NavLink>
           <div
@@ -124,10 +122,24 @@ const Header = () => {
         <div className="subnav">
           <NavLink to="/conference">
             {" "}
-            <button className="subnavbtn mobileNone">Conference</button>
+            <button className="subnavbtn mobileNone">{localizeFilter(lang, 'conference') || "Conference"}</button>
           </NavLink>
         </div>
       </div>
+        <Select defaultValue={lang} style={{ width: 100 }} onChange={handleChange}>
+            <Option value="am-AM">
+                <Armenia />
+                Հայ
+            </Option>
+            <Option value="ru-RU">
+                <Russia />
+                Рус
+            </Option>
+            <Option value="en-US">
+                <USA />
+                Eng
+            </Option>
+        </Select>
       <div className="soc-wrap mobileNone">
         <a href="https://www.facebook.com/Buissup" target="_blank">
           <FontAwesomeIcon icon={faFacebook} style={styleIcon} />
@@ -141,61 +153,6 @@ const Header = () => {
         <a href="https://www.linkedin.com/company/buissup" target="_blank">
           <FontAwesomeIcon icon={faLinkedinIn} style={styleIcon} />
         </a>
-      </div>
-      <div className="mobileContainer">
-        <button className="mobileButton">
-          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
-        </button>
-        <div className="mobileMenu">
-          <NavLink to="/" exact activeClassName="active">
-            <button
-              className="subnavbtn"
-              onClick={() => {
-                setActiveForum(false);
-                setActiveCommunity(true);
-              }}
-            >
-              Community
-            </button>
-          </NavLink>
-
-          <NavLink
-            to="/globalForum"
-            isActive={() => {
-              //setActiveCommunity(false);
-              // setActiveForum(true);
-            }}
-          >
-            <button
-              className="subnavbtn"
-              onClick={() => {
-                setActiveCommunity(false);
-                setActiveForum(true);
-                console.log(activeCommunity);
-              }}
-            >
-              Global Forum
-            </button>
-          </NavLink>
-          <NavLink to="/conference">
-            {" "}
-            <button className="subnavbtn">Conference</button>
-          </NavLink>
-          <div className="soc-wrap-mobile">
-            <a href="https://www.facebook.com/Buissup" target="_blank">
-              <FontAwesomeIcon icon={faFacebook} style={styleMobileIcon} />
-            </a>
-            <a
-              href="https://instagram.com/buissup.am?utm_medium=copy_link"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faInstagram} style={styleMobileIcon} />
-            </a>
-            <a href="https://www.linkedin.com/company/buissup" target="_blank">
-              <FontAwesomeIcon icon={faLinkedinIn} style={styleMobileIcon} />
-            </a>
-          </div>
-        </div>
       </div>
     </header>
   );

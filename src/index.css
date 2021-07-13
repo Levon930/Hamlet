@@ -26,6 +26,99 @@ main {
   overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 25px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #FFF;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 50px;
+  width: 50px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  width: 4px !important;
+  height: 24px !important;
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #002c84;
+  padding: 2.5em 0 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  padding-top: 30px;
+  color: #b8b7ad;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.content > div {
+  display: none;
+}
+
+.burgerLinks {
+  padding-right: 20px;
+  width: 80%;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  background: #FFF;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 45px;
+  margin-bottom: 25px;
+}
+.burgerLinks a {
+
+}
+
+@media screen and (max-width: 900px) {
+  .content > div {
+    display: block;
+  }
+}
+
 @font-face {
   font-family: "Montserratarm";
   src: url("../src/static/fonts/Montserratarm-Regular.otf");

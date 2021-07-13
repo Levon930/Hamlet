@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext, useState} from "react";
 import { Context } from "../../../context";
 import localizeFilter from '../../../locale/localize.filter'
 import star from "../../../static/img/starSmall.svg";
@@ -16,9 +16,10 @@ import twoIcon from "../../../static/img/icons/2.svg";
 import treeIcon from "../../../static/img/icons/3.svg";
 import fourIcon from "../../../static/img/icons/4.svg";
 import buisap from "../../../static/img/Ի՞նչ_է_պետք_անելմասնակից_դառնալու_համար (2).svg";
-import text from "../../../static/img/biz.svg";
 import icon_6 from "../../../static/img/iconhgy.svg";
-import { useState } from "react";
+import ArmGaxaparic from "../../../static/img/biz.svg";
+import RuGaxaparic from "../../../static/img/RuGaxaparic.svg";
+import RuInchpesDarnas from "../../../static/img/RuInchpesdarnal.svg";
 
 const GlobalForum = () => {
   const { lang } = useContext(Context);
@@ -76,7 +77,7 @@ const GlobalForum = () => {
                   paddingTop: "70px",
                 }}
               >
-                <img src={text} style={{ width: "100%", height: "100%" }} />
+                <img style={{ width: "100%", height: "100%" }} src={lang === 'am-AM' ? ArmGaxaparic : lang === 'ru-RU' ? RuGaxaparic : ''} />
               </div>
               <img
                 src={satelite}
@@ -157,9 +158,9 @@ const GlobalForum = () => {
           </div>
         </div>
       </section>
-      <section id="buissUpHeading">
+      <section id="buissUpHeading" style={{ alignItems: lang === 'ru-RU' && 'flex-end' }}>
         <div>
-          <img src={buisap} />
+          <img src={lang === 'am-AM' ? buisap : lang === 'ru-RU' ? RuInchpesDarnas : ''} />
         </div>
       </section>
       <section id="stepsSection" className="stepsSection-mb">

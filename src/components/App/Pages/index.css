@@ -43,6 +43,7 @@ p {
     flex-direction: row;
     width: 100%;
     margin: 1rem 0;
+    font-size: 20px;
 }
 .buttons button a{
     text-decoration: none;
@@ -819,12 +820,20 @@ p {
   color: #4355B1;
 }
 .businessItsYou{
+    position: absolute;
+    right: -5%;
+    width: 304px;
+    top: 0;
+    height: 304px;
     animation: rotate 10s both infinite;
 }
 
 .headerText{
     width: 50%;
-     margin-top: 70px
+    margin-top: 70px;
+}
+.headerText img {
+    width: 100%;
 }
 @keyframes rotate {
     from {
@@ -911,6 +920,8 @@ p {
       width: 100%;
   }
   .about-item img {
+      top: 50%;
+      transform: translateY(-50%);
       width: 20px;
       left: -10px;
   }

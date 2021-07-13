@@ -24,7 +24,12 @@ import icon_2 from "../../../static/img/icons2/Group 161.svg";
 import icon_3 from "../../../static/img/icons2/Group 162.svg";
 import icon_4 from "../../../static/img/icons2/Group 163.svg";
 import icon_5 from "../../../static/img/icons2/brain.svg";
-import text from "../../../static/img/biznesDues.svg";
+import ArmBusiness from "../../../static/img/biznesDues.svg";
+import RuBusiness from "../../../static/img/RusBusiness.svg"
+import UsBusiness from "../../../static/img/UsBusiness.svg"
+import RuBusinessCircle from "../../../static/img/RusBusinesCircle.svg"
+import USBusinessCircle from "../../../static/img/UsBusinessCircle.svg"
+import RuTeam from "../../../static/img/RuTeam.svg"
 
 import tim from "../../../static/img/tim.svg";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -49,7 +54,7 @@ const Community = () => {
             />
             <div className="intro-item-title">
               <div className="headerText">
-                <img src={text} style={{ width: "100%" }} />
+                <img src={lang === 'am-AM' ? ArmBusiness : lang === 'ru-RU' ? RuBusiness : UsBusiness} />
               </div>
               <img
                 src={satelite}
@@ -75,18 +80,7 @@ const Community = () => {
                 }}
                 className="sateliteStar2"
               />
-              <img
-                src={businessItsYou}
-                className="businessItsYou"
-                alt="businessItsYou"
-                style={{
-                  position: "absolute",
-                  right: "-5%",
-                  width: "304px",
-                  top: "0",
-                  height: "304px",
-                }}
-              />
+              <img className="businessItsYou" alt="businessItsYou" src={lang === 'am-AM' ? businessItsYou : lang === 'ru-RU' ? RuBusinessCircle : USBusinessCircle} />
             </div>
             <div className="buttons">
               <button className="moreInfo">{localizeFilter(lang, 'know more')}</button>
@@ -289,7 +283,7 @@ const Community = () => {
       <section id="team">
         <div className="team-title">
           <div>
-            <img src={tim} />
+            <img src={lang === 'am-AM' ? tim : lang === 'ru-RU' ? RuTeam : ''} />
           </div>
         </div>
         <div className="card-block">

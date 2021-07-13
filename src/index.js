@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/App/App";
+import BurgerMenu from "./components/shared/BurgerMenu";
 import Header from "./components/shared/Header/Header";
 import { Context } from './context';
 
@@ -18,6 +19,7 @@ import { BrowserRouter as Router } from "react-router-dom";
             }
             }>
                 <div className="content">
+                    <BurgerMenu pageWrapId={"app"} right />
                     <Router>
                         <Header />
                         <main>

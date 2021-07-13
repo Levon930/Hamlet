@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../context";
+
 import shutov from "../../../static/img/Բիզնեսը դու ես-1.svg";
+import RuShutov from "../../../static/img/RuShutov.svg"
 
 const Accelerator = () => {
+   const { lang } = useContext(Context);
+
+
   return (
     <div
       style={{
@@ -12,7 +18,7 @@ const Accelerator = () => {
         display: "flex",
       }}
     >
-      <img src={shutov} alt="shutov" style={{ width: "90%", padding: "100px" }} />
+      <img src={lang === 'am-AM' ? shutov : lang === 'ru-RU' ? RuShutov : ''} alt="shutov" style={{ width: "90%", padding: "100px" }} />
     </div>
   );
 };

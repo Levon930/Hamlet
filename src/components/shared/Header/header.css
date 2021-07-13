@@ -57,7 +57,7 @@
 }
 
 .header .soc-wrap {
-  width: 8%;
+  /*width: 8%;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,9 +167,13 @@ border:none
 }
 @media screen and (max-width: 900px) {
   .header{
-    position: fixed;
+    padding: 0 20px;
+    justify-content: space-between !important;
     min-width: 100%;
-    justify-content: space-around;
+  }
+
+  .header .ant-select {
+    margin-right: 80px;
   }
   .mobileContainer{
   position: relative;
