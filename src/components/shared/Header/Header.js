@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from "../../../context";
+import localizeFilter from '../../../locale/localize.filter'
+import { useLocation } from 'react-router-dom'
 import {
   faFacebook,
   faInstagram,
@@ -8,7 +11,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 //import * as Scroll from 'react-scroll';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo1 from "../../../static/img/logo1.svg";
 import logo2 from "../../../static/img/forum.svg";
 import logo3 from "../../../static/img/Group 2qqw.svg";
@@ -16,19 +19,21 @@ import "./header.css";
 import logo from "../../../static/img/comunity.svg";
 
 const Header = () => {
+  const location = useLocation();
+  const { lang } = useContext(Context);
   const [activeCommunity, setActiveCommunity] = useState(true);
   const [activeForum, setActiveForum] = useState(false);
   const [activeLogo, setActiveLogo] = useState(false);
   const styleIcon = { fontSize: "22px" };
   const styleMobileIcon = { fontSize: "14px" };
-  window.addEventListener("scroll", (e) => {
-    if (window.scrollY >= 80) {
-      setActiveLogo(true);
-    } else if (window.scrollY < 80) {
-      setActiveLogo(false);
-    }
-  });
-
+  // window.addEventListener("scroll", (e) => {
+  //   if (window.scrollY >= 80) {
+  //     setActiveLogo(true);
+  //   } else if (window.scrollY < 80) {
+  //     setActiveLogo(false);
+  //   }
+  // });
+  // console.log(location)
   return (
     <header className="header">
       <div className="logo-wrap">
@@ -52,7 +57,7 @@ const Header = () => {
             className="subnav-content mobileNone"
             style={{
               justifyContent: "space-around",
-              display: activeCommunity ? "flex" : "none",
+              display: location.pathname === '/' ? "flex" : "none",
               position: activeLogo ? "fixed" : "absolute",
               top: activeLogo ? 0 : "80px",
             }}
@@ -62,25 +67,21 @@ const Header = () => {
                 className="logo-wrap"
                 style={{ display: "flex", justifyContent: "flex-start" }}
               >
-                <img src={logo} />
+                <img src={logo} alt="logo"/>
               </div>
             ) : null}
             <div className="subMenu">
-              <a href="#intro">Գլխավոր</a>
-              <a href="#about">Մեր մասին</a>
-              <a href="#infos">Նպատակ</a>
-              <a href="#admins">Թիմ</a>
-              <a href="#contacts">Հետադարձ կապ</a>
+              <a href="#intro">{localizeFilter(lang, 'home')}</a>
+              <a href="#about">{localizeFilter(lang, 'about us')}</a>
+              <a href="#infos">{localizeFilter(lang, 'purpose')}</a>
+              <a href="#admins">{localizeFilter(lang, 'team')}</a>
+              <a href="#contacts">{localizeFilter(lang, 'feedback')}</a>
             </div>
           </div>
         </div>
         <div className="subnav">
           <NavLink
             to="/globalForum"
-            isActive={() => {
-              //setActiveCommunity(false);
-              // setActiveForum(true);
-            }}
           >
             <button
               className="subnavbtn"
@@ -96,7 +97,7 @@ const Header = () => {
           <div
             className="subnav-content mobileNone"
             style={{
-              display: activeForum ? "flex" : "none",
+              display: location.pathname === '/globalForum' ? "flex" : "none",
               justifyContent: "center",
 
               position: activeLogo ? "fixed" : "absolute",
@@ -111,7 +112,7 @@ const Header = () => {
                 <img src={logo2} alt="buissup logo" />
               </div>
             ) : null}
-            <div className="subMenu ">
+            <div className="subMenu">
               <a href="#intro">Գլխավոր</a>
               <a href="#about">Ծրագրի մասին</a>
               <a href="#iconsWithImage">ՈՒղղություններ</a>
@@ -125,28 +126,6 @@ const Header = () => {
             {" "}
             <button className="subnavbtn mobileNone">Conference</button>
           </NavLink>
-          <div className="subnav-content mobileNone">
-            <a href="#link1">Link 13</a>
-            <a href="#link2">Link 14</a>
-            <a href="#link3">Link 15</a>
-            <a href="#link4">Link 16</a>
-            <a href="#link3">Link 17</a>
-            <a href="#link4">Link 18</a>
-          </div>
-        </div>
-        <div className="subnav">
-          {/* <NavLink to="/accelerator">
-            {" "}
-            <button className="subnavbtn">Accelerator</button>
-          </NavLink>
-          <div className="subnav-content">
-            <a href="#link1">Link 19</a>
-            <a href="#link2">Link 20</a>
-            <a href="#link3">Link 21</a>
-            <a href="#link4">Link 22</a>
-            <a href="#link3">Link 23</a>
-            <a href="#link4">Link 24</a>
-          </div> */}
         </div>
       </div>
       <div className="soc-wrap mobileNone">

@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../context";
+import localizeFilter from '../../../locale/localize.filter'
 import {
   faPhone,
   faMapMarkerAlt,
@@ -14,6 +16,7 @@ import {
 import "./footer.css";
 
 const Footer = () => {
+  const { lang } = useContext(Context);
   const styleIcon = { fontSize: "30px" };
   return (
     <footer id="contacts">
@@ -21,7 +24,7 @@ const Footer = () => {
         <div className="footer-item">
           <FontAwesomeIcon icon={faMapMarkerAlt} style={styleIcon} />
           <span className="item-elem-adress">
-            ք․Երևան, Գ․ Լուսավորիչ 9, «Երևան Պլազա» բիզնես-կենտրոն
+            {localizeFilter(lang, 'address')}
           </span>
         </div>
         {/* <div className="footer-item">

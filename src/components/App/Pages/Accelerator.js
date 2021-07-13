@@ -12,7 +12,7 @@ const Accelerator = () => {
         display: "flex",
       }}
     >
-      <img src={shutov} style={{ width: "90%", padding: "100px" }} />
+      <img src={shutov} alt="shutov" style={{ width: "90%", padding: "100px" }} />
     </div>
   );
 };

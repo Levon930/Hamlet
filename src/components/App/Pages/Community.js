@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../context";
+import localizeFilter from '../../../locale/localize.filter'
 import aboutImg from "../../../static/img/aboutImg.svg";
 import star from "../../../static/img/starSmall.svg";
 import businessItsYou from "../../../static/img/businessItsYou.svg";
 import borderStar from "../../../static/img/starWithBorder.svg";
 import redStar from "../../../static/img/redStar.svg";
-import infos from "../../../static/img/infos.png";
 import person1 from "../../../static/img/preson1.png";
 import person2 from "../../../static/img/preson2.png";
 import person3 from "../../../static/img/preson3.png";
@@ -30,16 +31,14 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Community = ({ history }) => {
+const Community = () => {
+  const { lang } = useContext(Context);
   const styleIcon = { fontSize: "25px", color: "#0B3488" };
-  const [show, setShow] = useState(0);
   return (
     <>
       {/* <!-- INRO SECTION --> */}
 
       <section id="intro">
-        {/* <img src={star} className="intro-star" /> */}
-        {/* <img src={borderStar} className="intro-star-border" /> */}
         <div className="container">
           <div className="intro-item">
             <img src={star} className="intro-item-img" alt="*" />
@@ -57,12 +56,12 @@ const Community = ({ history }) => {
                 alt="satelite"
                 style={{
                   position: "absolute",
-
+                  top: '75px',
                   right: "-408px",
                   width: "538px",
                   height: "516px",
                 }}
-                className="sateliteStar mobileNone"
+                className="sateliteStar"
               />
               <img
                 src={borderStar}
@@ -71,14 +70,14 @@ const Community = ({ history }) => {
                   position: "absolute",
                   right: "-408px",
                   width: "538px",
-                  top: "5%",
+                  top: "calc(75px + 5%)",
                   height: "516px",
                 }}
-                className="sateliteStar mobileNone"
+                className="sateliteStar2"
               />
               <img
                 src={businessItsYou}
-                className="businessItsYou mobileNone"
+                className="businessItsYou"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",
@@ -90,7 +89,7 @@ const Community = ({ history }) => {
               />
             </div>
             <div className="buttons">
-              {/* <button className="moreInfo">Իմանալ ավելին</button> */}
+              <button className="moreInfo">{localizeFilter(lang, 'know more')}</button>
             </div>
           </div>
         </div>
@@ -105,23 +104,17 @@ const Community = ({ history }) => {
             <div className="about-item">
               <h1>
                 <img src={redStar} alt="redStar" />
-                Տեսլական
+                {localizeFilter(lang, 'vision')}
               </h1>
               <p>
-                Buissup Community-ն բիզնես ակումբ է գաղափարի հիմքում ընկած է
-                ՀՀ-ում առողջ բիզնես միջավայրի ստեղծումը և զարգացումը` կրթական
-                ծրագրերի, խորհրդատվական ծառայությունների և ֆինանսական միջոցների
-                ներգրավվման միջոցով: Կրթական ուղղությունը Ասոցիացիայի առանցքային
-                հիմնասյուններից մեկն է, քանի որ յուրաքանչյուր երկրի
-                բարեկեցության հիմքում ընկած է կրթված երիտասարդությունը:
+                {localizeFilter(lang, 'visionContent')}
               </p>
               <h1>
                 <img src={redStar} alt="redStar" />
-                Առաքելություն
+                {localizeFilter(lang, 'mission')}
               </h1>
               <p>
-                Buissup Community–ի հիմնական առաքելությունը ՀՀ գործարար ներուժի
-                բացահայտումն է ինչպես նաև դրա իրացումն ու զարգացումը:
+                {localizeFilter(lang, 'missionContent')}
               </p>
             </div>
           </div>
@@ -132,219 +125,163 @@ const Community = ({ history }) => {
           </div>
         </div>
       </section>
+
       <section id="infos">
         <div className="infos-block infos-block-mb">
-          <div>
-            <div
-              onMouseEnter={() =>
-                setTimeout(() => {
-                  setShow(1);
-                }, 600)
-              }
-              onMouseLeave={() => setShow(0)}
-            >
+          <div style={{ alignSelf: 'flex-start', marginTop: '-15px' }}>
+            <div style={{width: '100%'}}>
               <div className="info-circle">
-                {show === 1 ? (
-                  <div className="circleText">
-                    <p>Առցանց բիզնես դասընթացների և սեմինարների անցկացում</p>
-                  </div>
-                ) : (
-                  <img src={icon_5} style={{ width: "40%" }} />
-                )}
+                <div className="circleText">
+                  <p>{localizeFilter(lang, 'providing knowledge content')}</p>
+                </div>
+                <img src={icon_5} style={{ width: "40%" }} />
               </div>
             </div>
 
             <div className="info-circle-text">
               <FontAwesomeIcon icon={faChevronDown} style={styleIcon} />
-              <p>Գիտելիքների տրամադրում</p>
+              <p>{localizeFilter(lang, 'providing knowledge')}</p>
             </div>
           </div>
-          <div>
+
+
+          <div style={{ alignSelf: 'flex-end', marginBottom: '-15px' }}>
             <div className="info-circle-text-up">
-              <p>Ներդրումների ներգրավվում</p>
+              <p>{localizeFilter(lang, 'attraction of investments')}</p>
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
-            <div
-              onMouseEnter={() =>
-                setTimeout(() => {
-                  setShow(2);
-                }, 600)
-              }
-              onMouseLeave={() => setShow(0)}
-            >
+            <div style={{width: '100%'}}>
               <div className="info-circle">
-                {show === 2 ? (
-                  <div className="circleText">
-                    <p>
-                      Ապահովել նախագծերի իրագործման և զարգացմեն համար անհրաժեշտ
-                      ներդրումներ
-                    </p>
-                  </div>
-                ) : (
-                  <img src={icon_2} />
-                )}
+                <div className="circleText">
+                  <p>
+                    {localizeFilter(lang, 'attraction of investments content')}
+                  </p>
+                </div>
+
+                <img src={icon_2} />
               </div>
             </div>
           </div>
-          <div>
-            <div
-              onMouseEnter={() =>
-                setTimeout(() => {
-                  setShow(3);
-                }, 600)
-              }
-              onMouseLeave={() => setShow(0)}
-            >
+
+          <div style={{ alignSelf: 'flex-start', marginTop: '-15px' }}>
+            <div style={{width: '100%'}}>
               <div className="info-circle">
-                {show === 3 ? (
-                  <div className="circleText">
-                    <p>
-                      Ակումբը ձևավորում է հայ գործարարների բիզնես փորձի
-                      փոխանակման հարթակ
-                    </p>
-                  </div>
-                ) : (
-                  <img src={icon_1} />
-                )}
+                <div className="circleText">
+                  <p>
+                    {localizeFilter(lang, 'formation of a business club content')}
+                  </p>
+                </div>
+                <img src={icon_1} />
               </div>
             </div>
 
             <div className="info-circle-text">
               <FontAwesomeIcon icon={faChevronDown} style={styleIcon} />
-              <p>Բիզնես ակումբի ձևվորում</p>
+              <p>{localizeFilter(lang, 'formation of a business club')}</p>
             </div>
           </div>
-          <div>
+
+
+          <div style={{ alignSelf: 'flex-end', marginBottom: '-15px' }}>
             <div className="info-circle-text-up">
-              <p>Նորարարական տեխնոլոգիաների ներդրումներ</p>
+              <p>{localizeFilter(lang, 'investments in innovative technologies')}</p>
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
-            <div
-              onMouseEnter={() =>
-                setTimeout(() => {
-                  setShow(4);
-                }, 600)
-              }
-              onMouseLeave={() => setShow(0)}
-            >
+            <div style={{width: '100%'}}>
               <div className="info-circle">
-                {show === 4 ? (
-                  <div className="circleText">
-                    <p>
-                      Ներդրումների շրջանակներում շեշտը կդրվի հայ երիտասարդների
-                      արդիական և նորարական գաղափարների զարգացման վրա
-                    </p>
-                  </div>
-                ) : (
-                  <img src={icon_3} />
-                )}
+                <div className="circleText">
+                  <p>
+                    {localizeFilter(lang, 'investments in innovative technologies content')}
+                  </p>
+                </div>
+                <img src={icon_3} />
               </div>
             </div>
           </div>
-          <div>
-            <div
-              onMouseEnter={() =>
-                setTimeout(() => {
-                  setShow(5);
-                }, 600)
-              }
-              onMouseLeave={() => setShow(0)}
-            >
+
+          <div style={{ alignSelf: 'flex-start', marginTop: '-15px' }}>
+            <div style={{width: '100%'}}>
               <div className="info-circle">
-                {show === 5 ? (
                   <div className="circleText">
                     <p>
-                      Կրթական և ներդրումային միջավայրի զարգացումը ոչ միայն
-                      կկանխի արտագաղթը, այլև կհանդիսանա հայրենադարձության ուժեղ
-                      ազդակ։
+                      {localizeFilter(lang, 'stimulating brain gain content')}
                     </p>
                   </div>
-                ) : (
                   <img src={icon_4} />
-                )}
               </div>
             </div>
 
             <div className="info-circle-text">
               <FontAwesomeIcon icon={faChevronDown} style={styleIcon} />
-              <p>«Ուղեղի ներհոսք»-ի խթանում</p>
+              <p>{localizeFilter(lang, 'stimulating brain gain')}</p>
             </div>
           </div>
         </div>
       </section>
+
+      <section id="infosMobile">
+
+      </section>
       <section id="admins">
         <div className="admins-title">
           <h1>
-            Buissup Global Forum-ը իրականացվում է Ռուսաստանում «Հայ գործարաների
-            ասոցիացիա»-ի հիմնադիրների նախաձեռնությամբ։
+            {localizeFilter(lang, 'initiators')}
           </h1>
           <p>
-            Ռուսաստանում «Հայ գործարաների ասոցիացիա»-ն ստեղծվել է Հայաստանի և
-            Ռուսաստանի հայ գործարարների միջև առողջ բիզնես մթնոլորտ և
-            աշխատանքային հարաբերություններ ապահովելու նպատակով։ Ասոցիացիայի
-            հիմնադիրները Սամվել Կարապետյանի ռուսաստանաբնակ խոշոր և և հաջողակ
-            հայազգի գործարարներ են։
+            {localizeFilter(lang, 'initiators content')}
           </p>
         </div>
         <div className="card-block">
           <div className="card">
             <img src={person1} alt="preson" />
-            <h3 className="card-name">Սամվել Կարապետյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Samvel Karapetyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի նախագահ և հիմնադիր, «Տաշիր»
-              ընկերությունների խմբի հիմնադիր և սեփականատեր
+              {localizeFilter(lang, 'Samvel Karapetyan position')}
             </p>
           </div>
 
           <div className="card">
             <img src={person2} alt="preson" />
-            <h3 className="card-name">Արթուր Ջանիբեկյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Artur Janibekyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, Comedy Club Production-ի
-              հիմնադիր, «Գազպրոմ Մեդիա Հոլդինգ» ԲԸ ժամանցային հեռուստաալիքների
-              սուբհոլդինգի ղեկավարի առաջին տեղակալ
+              {localizeFilter(lang, 'Artur Janibekyan position')}
             </p>
           </div>
 
           <div className="card">
             <img src={person3} alt="preson" />
-            <h3 className="card-name">ԿԱՄՈ ԱՎԱԳՈՒՄՅԱՆ</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Kamo Avagumyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի փոխնախագահ և հիմնադիր «Ավիլոն»
-              ընկերությունների խմբի տնօրենների խորհրդի նախագահ
+              {localizeFilter(lang, 'Kamo Avagumyan position')}
             </p>
           </div>
 
           <div className="card">
             <img src={person4} alt="preson" />
-            <h3 className="card-name">Հայկ Իգնաթյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Hayk Ignatyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Տաշիր» ընկերությունների
-              խմբի առաջին փոխնախագահ, «Ֆորա-Բանկ» ԲԱԲ տնօրենների խորհրդի նախագահ
+              {localizeFilter(lang, 'Hayk Ignatyan position')}
             </p>
           </div>
           <div className="card">
             <img src={person5} alt="preson" />
-            <h3 className="card-name">Արմեն Շահազիզյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Armen Shahazizyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Լուդինգ» ընկերության
-              համահիմնադիր
+              {localizeFilter(lang, 'Armen Shahazizyan position')}
             </p>
           </div>
           <div className="card">
             <img src={person6} alt="preson" />
-            <h3 className="card-name">Կարեն Ավագումյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Karen Avagumyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Ռանդ-Տրանս»
-              ընկերությունների խմբի տնօրենների խորհրդի նախագահ, NEBO.digital
+              {localizeFilter(lang, 'Karen Avagumyan position')}
             </p>
           </div>
           <div className="card">
             <img src={person7} alt="preson" />
-            <h3 className="card-name">Վարուժան Արտենյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Varujan Artenyan')}</h3>
             <p className="card-description">
-              «Հայ գործարաների ասոցիացիա»-ի հիմնադիր, «Տաշիր» ընկերությունների
-              խմբի առաջին փոխնախագահ
+              {localizeFilter(lang, 'Varujan Artenyan position')}
             </p>
           </div>
         </div>
@@ -358,38 +295,37 @@ const Community = ({ history }) => {
         <div className="card-block">
           <div className="card">
             <img src={member1} alt="member" />
-            <h3 className="card-name">Գոհար Ղումաշյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Gohar Gumashyan')}</h3>
             <p className="card-description">
-              Ռուսաստանում «Հայ գործարաների ասոցիացիա»-ն գործադիր տնօրեն
+              {localizeFilter(lang, 'Gohar Gumashyan position')}
             </p>
           </div>
           <div className="card">
             <img src={member2} alt="member" />
-            <h3 className="card-name">Համլետ Ասատրյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Hamlet Asatryan')}</h3>
             <p className="card-description">
-              ՌՈՒՍԱՍՏԱՆՈՒՄ «ՀԱՅ ԳՈՐԾԱՐԱՆԵՐԻ ԱՍՈՑԻԱՑԻԱ»-Ի ՀԱՅԱՍՏԱՆՅԱՆ ԳՐԱՍԵՆՅԱԿԻ
-              ՂԵԿԱՎԱՐ
+              {localizeFilter(lang, 'Hamlet Asatryan position')}
             </p>
           </div>
           <div className="card">
             <img src={member3} alt="member" />
-            <h3 className="card-name">Քրիստինա Խաչատրյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Qristina Khachatryan')}</h3>
             <p className="card-description">
-              Buissup Community-ի ծրագրի ղեկավար
+              {localizeFilter(lang, 'Qristina Khachatryan position')}
             </p>
           </div>
           <div className="card">
             <img src={member4} alt="member" />
-            <h3 className="card-name">Աննա Գրիգորյան</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Anna Grigoryan')}</h3>
             <p className="card-description">
-              Buissup Community-ի զարգացման գծով պատասխանատու
+              {localizeFilter(lang, 'Anna Grigoryan position')}
             </p>
           </div>
           <div className="card">
             <img src={member5} alt="member" />
-            <h3 className="card-name">ՆԵԼԼԻ ՊԵՏՐՈՍՅԱՆ</h3>
+            <h3 className="card-name">{localizeFilter(lang, 'Nelli Petrosyan')}</h3>
             <p className="card-description">
-              Buissup Global Forum-ի ծրագրային մենեջեր
+              {localizeFilter(lang, 'Nelli Petrosyan position')}
             </p>
           </div>
         </div>

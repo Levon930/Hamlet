@@ -84,28 +84,29 @@ const GlobalForum = () => {
                 src={satelite}
                 alt="satelite"
                 style={{
+                  top: '58px',
                   position: "absolute",
                   right: "-408px",
                   width: "538px",
                   height: "516px",
                 }}
-                className="mobileNone"
+                className="sateliteStar"
               />
               <img
                 src={borderStar}
                 alt="*"
                 style={{
                   position: "absolute",
-                  right: "-40%",
+                  right: "-408px",
                   width: "538px",
-                  top: "5%",
+                  top: "calc(58px + 5%)",
                   height: "516px",
                 }}
-                className="mobileNone"
+                className="sateliteStar2"
               />
               <img
                 src={businessItsYou}
-                className="businessItsYou mobileNone"
+                className="businessItsYou"
                 alt="businessItsYou"
                 style={{
                   position: "absolute",
@@ -123,7 +124,7 @@ const GlobalForum = () => {
                   target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeLjECvU04U5ImMBvsobLA221l_woRPUn6CPTdWlteTr-hPiA/viewform"
                 >
-                  Դիմի՛ր հիմա
+                  Իմանալ ավելին
                 </a>
               </button>
             </div>

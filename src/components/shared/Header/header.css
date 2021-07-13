@@ -79,7 +79,6 @@
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -126,13 +125,14 @@
   float: left;
   color: #0b3488;
   text-decoration: none;
+  padding: 14px 16px;
 }
 .info-circle-text p ,.info-circle-text-up p{
 font-size: 17px;
 }
-.circleText{
-  width: 97%;
-}
+/*.circleText{*/
+/*  width: 97%;*/
+/*}*/
 .mobileMenu{
   position: absolute;
   display: flex;
@@ -165,7 +165,7 @@ border:none
   color: white;
   padding: 5px;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
   .header{
     position: fixed;
     min-width: 100%;
