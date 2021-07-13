@@ -151,7 +151,7 @@ const Community = () => {
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
             <div style={{width: '100%'}}>
-              <div className="info-circle">
+              <div className="info-circle marginLeft">
                 <div className="circleText">
                   <p>
                     {localizeFilter(lang, 'attraction of investments content')}
@@ -188,7 +188,7 @@ const Community = () => {
               <FontAwesomeIcon icon={faChevronUp} style={styleIcon} />
             </div>
             <div style={{width: '100%'}}>
-              <div className="info-circle">
+              <div className="info-circle marginLeft">
                 <div className="circleText">
                   <p>
                     {localizeFilter(lang, 'investments in innovative technologies content')}
@@ -219,9 +219,9 @@ const Community = () => {
         </div>
       </section>
 
-      <section id="infosMobile">
+      {/*<section id="infosMobile">*/}
 
-      </section>
+      {/*</section>*/}
       <section id="admins">
         <div className="admins-title">
           <h1>

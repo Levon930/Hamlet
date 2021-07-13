@@ -113,11 +113,11 @@ const Header = () => {
               </div>
             ) : null}
             <div className="subMenu">
-              <a href="#intro">Գլխավոր</a>
-              <a href="#about">Ծրագրի մասին</a>
-              <a href="#iconsWithImage">ՈՒղղություններ</a>
-              <a href="#stepsSection">Մասնակցության ուղղեցույց</a>
-              <a href="#contacts">Հետադարձ կապ</a>
+              <a href="#intro">{localizeFilter(lang, 'home')}</a>
+              <a href="#about">{localizeFilter(lang, 'about the project')}</a>
+              <a href="#iconsWithImage">{localizeFilter(lang, 'directions')}</a>
+              <a href="#stepsSection">{localizeFilter(lang, 'participation guide')}</a>
+              <a href="#contacts">{localizeFilter(lang, 'feedback')}</a>
             </div>
           </div>
         </div>

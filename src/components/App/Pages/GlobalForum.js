@@ -1,5 +1,6 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import { Context } from "../../../context";
+import localizeFilter from '../../../locale/localize.filter'
 import star from "../../../static/img/starSmall.svg";
 import businessItsYou from "../../../static/img/businessItsYou.svg";
 import borderStar from "../../../static/img/starWithBorder.svg";
@@ -18,43 +19,40 @@ import buisap from "../../../static/img/Ի՞նչ_է_պետք_անելմասնա�
 import text from "../../../static/img/biz.svg";
 import icon_6 from "../../../static/img/iconhgy.svg";
 import { useState } from "react";
+
 const GlobalForum = () => {
+  const { lang } = useContext(Context);
   const [active, setActive] = useState(0);
   const data = [
     {
       icon: oneIcon,
-      title: "Քայլ 1 ",
-      name: "Լրացնել հայտադիմում ",
-      description:
-        "Մասնակից դառնալու առաջին նախապայմանը հայտադիմումի լրացումն է։ Շատ կարևոր է հայտադիմումը լրացնել լիարժեք, տալ հարցերին ամբողջական և հստակ պատասխաններ, քանի որ հայտադիմումը պետք է ամբողջովին արտացոլի դիմորդի գաղափարը, դրա կարևորությունը և իրագործելիությունը։ ",
+      title: localizeFilter(lang, 'step one'),
+      name: localizeFilter(lang, 'step one name'),
+      description: localizeFilter(lang, 'step one description')
     },
     {
       icon: twoIcon,
-      title: "Քայլ 2 ",
-      name: "Մասնակցել հարցազրույցի Buissup Global Forum-ի հայտադումների գնահատման հանձնաժողովի հետ",
-      description:
-        "Հայտադիմուների հավաքագրումից հետո, Buissup Global Forum-ի թիմը կանցկացնի նախնական մշակում, որից հետո նախապատվություն ստացած ծրագրերը կհրավիրվեն հարցազրույցի։ Հարցազրույցի ընթացքում մասնակիցները պետք է 7 րոպեի ընթացքում ներկայացնեն իրենց բիզնես-նախագծերը, այնուհետև պատասխանեն հանձնաժողովի հարցերին։ Հարցազրույցների արդյունքների հիման վրա կընտրվեն այն 200 հաջողակ երիտասարդները, ովքեր հնարավորություն կստանան մասնակցել Buissup Global Forum-ին։ ",
+      title: localizeFilter(lang, 'step two'),
+      name: localizeFilter(lang, 'step two name'),
+      description: localizeFilter(lang, 'step two description'),
     },
     {
       icon: treeIcon,
-      title: "Քայլ 3 ",
-      name: "Buissup Global Forum-ի մասնակիցների պաշտոնական հրապարակում",
-      description:
-        "Օգոստոսի 7-ին Elit Plaza բիզնես կենտրոնում տեղի կունենա առաջին Buissup Conference-ը, որին կհրավիրվեն Buissup Global Forum-ի մասնակիցության հայտ ներկայացրած բոլոր հայտ ներկայացրած անձիք։ Միջոցառման առաջին հատվածում սպասվում են հետաքրքիր բիզնես-դասախոսություններ և թրեյնինգներ, իսկ միջոցառման ավարտին կհրապարակվեն հաղթող նախագծերի անունները։",
+      title: localizeFilter(lang, 'step three'),
+      name: localizeFilter(lang, 'step three name'),
+      description: localizeFilter(lang, 'step three description')
     },
     {
       icon: icon_6,
-      title: "Քայլ 4 ",
-      name: "Մասնակցել Buissup Global Forum-ին",
-      description:
-        "Սեպտեմբերի 7-13 Best Western Plus Dilijan հյուրանոցում կանցկացվի Buissup Global Forum-ը, որին կմասնակցեն անցած քայլի ընթացքում հրապարակված նախագծերի հեղինակները/թիմերը։ ",
+      title: localizeFilter(lang, 'step four'),
+      name: localizeFilter(lang, 'step four name'),
+      description: localizeFilter(lang, 'step four description')
     },
     {
       icon: fourIcon,
-      title: "Քայլ 5 ",
-      name: "Մասնակցել Dvin Music Hall-ում կայացող մեծ միջոցառմանը",
-      description:
-        "Սեպտեմբերի 20-ին Dvin Music Hall-ում Buissup Global Forum-ի առավելագույն միավորներ հավաքած թիմերը հնարավորություն կունենան ներկայացնել իրենց բիզնես-ծրագրերը հայ աշխարհի մի շարք խոշոր գործարարների և դառնալ մեծ ներդրումային ֆոնդի շահառուներից մեկը։ ",
+      title: localizeFilter(lang, 'step five'),
+      name: localizeFilter(lang, 'step five name'),
+      description: localizeFilter(lang, 'step five description'),
     },
   ];
 
@@ -124,7 +122,7 @@ const GlobalForum = () => {
                   target="_blank"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSeLjECvU04U5ImMBvsobLA221l_woRPUn6CPTdWlteTr-hPiA/viewform"
                 >
-                  Իմանալ ավելին
+                  {localizeFilter(lang, 'know more')}
                 </a>
               </button>
             </div>
@@ -134,14 +132,9 @@ const GlobalForum = () => {
       <section id="about" className="about_page2">
         <img src={redStar} alt="redStar" className="redStar" />
         <div className="about-item page2">
-          <h1>Ծրագրի մասին</h1>
+          <h1>{localizeFilter(lang, 'about the project')}</h1>
           <p>
-            Buissup Global Forum մեկնարկը կտրվի Սեպտեմբերի 7-ին, Best Western
-            Plus Dilijan հյուրանոցում։ Այն իրենից ներկայացնում է յոթօրյա
-            ինտենսիվ դասընթաց, որը միտված է մասնակից շուրջ 200 հայ
-            երիտասարդներին տրամադրել բիզնես կրթություն։ BuissUp Global Forum-ի
-            ընթացքում մասնակիցները կստանան բիզնես ստեղծելու, այն գրագետ վարելու
-            և զարգացնելու համար բավարար ու անհրաժեշտ գիտելիքներ։
+            {localizeFilter(lang, 'about the project content')}
           </p>
         </div>
       </section>
@@ -165,11 +158,6 @@ const GlobalForum = () => {
         </div>
       </section>
       <section id="buissUpHeading">
-        {/* <h2>Ի՞նչ է պետք անել </h2>
-        <div>
-          <img src={buisap} />
-        </div>
-        <h3>մասնակից դառնալու համար</h3> */}
         <div>
           <img src={buisap} />
         </div>

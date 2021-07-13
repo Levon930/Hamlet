@@ -510,6 +510,8 @@ p {
 #stepsSection .content {
     width: 50%;
     font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
 }
 .stepsDots > div {
     width: 50px;
@@ -654,7 +656,7 @@ p {
     width: 356px;
     height: 356px;
     border-radius: 50%;
-
+    align-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -747,6 +749,9 @@ p {
     width: 13%;
 }
 
+.info-circle img {
+    width: 40% !important;
+}
 /*.infos-block > div {*/
 /*    transform: scale(0.9);*/
 /*}*/
@@ -860,14 +865,48 @@ p {
         color: #002c84 ;
         transition-duration: 0.2s;
     }
+    #infos {
+        padding: 10px;
+    }
+
   .infos-block-mb{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-   
     width: 100%;
-    
   }
+
+  .infos-block-mb > div {
+      width: 100%;
+      flex-direction: row-reverse !important;
+      justify-content: space-between !important;
+  }
+    .infos-block-mb > div > div {
+        width: 50% !important;
+    }
+
+    .infos-block-mb > div > div .marginLeft{
+        margin-left: auto;
+    }
+
+    .infos-block-mb > div .info-circle-text, .infos-block-mb > div .info-circle-text-up {
+        width: 40% !important;
+        margin: 0 !important;
+        flex-direction: row-reverse !important;
+    }
+
+    .infos-block-mb > div .info-circle-text-up svg {
+        transform: rotateZ(90deg) !important;
+    }
+
+    .infos-block-mb > div .info-circle-text svg {
+        padding: 0 !important;
+        transform: rotateZ(90deg) !important;
+    }
+    .infos-block {
+        background-image: url(../../../static/img/infos-bg-rot.svg) !important;
+    }
+
   .headerText{
       width: 100%;
   }
@@ -883,17 +922,24 @@ p {
   .about-block{
       width: 87% !important;
   }
-
-  /*.card{*/
-  /*    width: 40% !important;*/
-  /*    margin: 5px;*/
-
-  /*}*/
   .card h1{
       font-size: 15px;
   }
   
+@media screen and (max-width: 390px){
+    .info-circle{
+        width: 76px !important;
+        height: auto !important;
+    }
+    .infos-block-mb > div .info-circle-text p, .infos-block-mb > div .info-circle-text-up p {
+        font-size: 15px !important;
+    }
+    .infos-block-mb > div .info-circle-text svg, .infos-block-mb > div .info-circle-text-up svg {
+        font-size: 20px !important;
+    }
 
+
+}
 #admins{
     padding: 0 10px;
     
@@ -916,7 +962,7 @@ height: 100px;
   }
   .stepsDots .activeDotEnd::before {
    
-    height: 10px;
+    height: 6.4vw;
     
 }
 .stepsDots .activeDot::after {
@@ -924,7 +970,7 @@ height: 100px;
     position: absolute;
     background-color: #002C84;
     width: 2px;
-    height: 20px;
+    height: 6.4vw;
     top: 100%;
     left: 50%;
 }
@@ -933,7 +979,7 @@ height: 100px;
     position: absolute;
     background-color: #002C84;
     width: 2px;
-    height: 20px;
+    height: 6.4vw;
     top: 100%;
     left: 50%;
 }
@@ -945,31 +991,32 @@ height: 100px;
     margin: 0 10px;
 }
 #stepsSection .content {
-    width:90%;
+    width: 85%;
+    align-self: center;
 }
 .stepsDots .activeDotDouble::before {
-   
-    height: 10px;
+
+    height: 6.4vw;
    
 }
 .stepsDots .dot::after {
  
-    height: 10px;
+    height: 6.4vw;
   
 }
 .stepsDots .dot1::after {
    
-    height: 10px;
+    height: 6.4vw;
    
 }
 .stepsDots .dot::before {
 
-    height: 10px;
+    height: 6.4vw;
    
 }
 .stepsDots .dotEnd::before {
     
-    height: 10px;
+    height: 6.4vw;
     
 }
 .about-item img {
@@ -997,7 +1044,7 @@ height: auto !important
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 
@@ -1068,6 +1115,10 @@ width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
+
+    /*.infos-block:before {*/
+    /*    transform: translate(-50%, -50%) rotate(90deg) scale(0.9);*/
+    /*}*/
     .card>h3{
         font-size: 15px !important;
 
@@ -1137,13 +1188,13 @@ width: 100%;
         left: -40px !important;
     }
 
-    #infos {
-        display: none !important;
-    }
+    /*#infos {*/
+    /*    display: none !important;*/
+    /*}*/
 
-    #infosMobile {
-        display: block !important;
-    }
+    /*#infosMobile {*/
+    /*    display: block !important;*/
+    /*}*/
 }
 
 .card {
@@ -1164,6 +1215,6 @@ width: 100%;
 
     .infos-block > div {
         align-self: unset !important;
-        margin: 0 !important;
+        margin: 1.68% 0 !important;
     }
 }
