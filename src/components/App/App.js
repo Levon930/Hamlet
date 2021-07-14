@@ -8,8 +8,8 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Switch>
-      <Route path="/" component={Community} exact />
-      <Route path="/globalForum" component={GlobalForum} />
+      <Route path="/" component={GlobalForum} exact />
+      <Route path="/community" component={Community} />
       <Route path="/conference" component={Conference} />
       <Route path="/accelerator" component={Accelerator} />
     </Switch>

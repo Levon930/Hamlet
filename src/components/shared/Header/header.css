@@ -208,8 +208,24 @@ border:none
 
 }
 
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none !important;
+}
+
 .ant-select-selection-item {
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1250px) {
+  .scrollMenu {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .scrollMenu {
+    font-size: 12px !important;
+  }
 }
 /* .subnav-content a:hover {
   background-color: #eee;

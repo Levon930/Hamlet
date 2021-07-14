@@ -1,21 +1,27 @@
-import { useContext } from "react";
+import {useContext, useState} from "react";
 import { Context } from "../../context";
 import { slide as Menu } from 'react-burger-menu'
+import { NavLink } from "react-router-dom";
 import localizeFilter from '../../locale/localize.filter';
 
 const BurgerMenu = (props) => {
     const { lang } = useContext(Context);
+    const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false);
+
+    const setStateOfMenu = ({isOpen}) => {
+        setIsOpenBurgerMenu(isOpen)
+    }
 
     return (
-        <Menu {...props}>
+        <Menu {...props} isOpen={isOpenBurgerMenu} onStateChange={setStateOfMenu} >
             <div className="burgerLinks">
-                <a href="/">{localizeFilter(lang, 'community') || "Community"}</a>
+                <NavLink to="/" onClick={() => setIsOpenBurgerMenu(false)}>{localizeFilter(lang, 'global forum') || "Global forum"}</NavLink>
             </div>
             <div className="burgerLinks">
-                <a href="/globalForum">{localizeFilter(lang, 'global forum') || "Global forum"}</a>
+                <NavLink to="/community" onClick={() => setIsOpenBurgerMenu(false)}>{localizeFilter(lang, 'community') || "Community"}</NavLink>
             </div>
             <div className="burgerLinks">
-                <a href="/conference">{localizeFilter(lang, 'conference') || "Conference"}</a>
+                <NavLink to="/conference" onClick={() => setIsOpenBurgerMenu(false)}>{localizeFilter(lang, 'conference') || "Conference"}</NavLink>
             </div>
 
         </Menu>

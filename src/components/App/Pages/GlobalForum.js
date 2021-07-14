@@ -8,9 +8,19 @@ import redStar from "../../../static/img/redStar.svg";
 import satelite from "../../../static/img/path.svg";
 import one from "../../../static/img/Сгруппировать 303.svg";
 import two from "../../../static/img/Сгруппировать 304.svg";
-import tree from "../../../static/img/Сгруппировать 305.svg";
+import three from "../../../static/img/Сгруппировать 305.svg";
 import four from "../../../static/img/Сгруппировать 306.svg";
 import five from "../../../static/img/Сгруппировать 307.svg";
+import RUone from "../../../static/img/Ru1.svg"
+import RUtwo from "../../../static/img/Ru2.svg";
+import RUthree from "../../../static/img/Ru3.svg";
+import RUfour from "../../../static/img/Ru4.svg";
+import RUfive from "../../../static/img/Ru5.svg";
+import ENone from "../../../static/img/En1.svg";
+import ENtwo from "../../../static/img/En2.svg";
+import ENthree from "../../../static/img/En3.svg";
+import ENfour from "../../../static/img/En4.svg";
+import ENfive from "../../../static/img/En5.svg";
 import oneIcon from "../../../static/img/icons/1.svg";
 import twoIcon from "../../../static/img/icons/2.svg";
 import treeIcon from "../../../static/img/icons/3.svg";
@@ -133,19 +143,19 @@ const GlobalForum = () => {
       <section id="iconsWithImage">
         <div className="iconsWithImageContainer">
           <div>
-            <img src={one} />
+            <img src={lang === 'am-AM' ? one : lang === 'ru-RU' ? RUone : ENone} />
           </div>
           <div>
-            <img src={two} />
+            <img src={lang === 'am-AM' ? two : lang === 'ru-RU' ? RUtwo : ENtwo} />
           </div>
           <div>
-            <img src={tree} />
+            <img src={lang === 'am-AM' ? three : lang === 'ru-RU' ? RUthree : ENthree} />
           </div>
           <div>
-            <img src={four} />
+            <img src={lang === 'am-AM' ? four : lang === 'ru-RU' ? RUfour : ENfour} />
           </div>
           <div>
-            <img src={five} />
+            <img src={lang === 'am-AM' ? five : lang === 'ru-RU' ? RUfive : ENfive} />
           </div>
         </div>
       </section>

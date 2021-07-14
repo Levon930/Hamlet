@@ -19,8 +19,8 @@ import { BrowserRouter as Router } from "react-router-dom";
             }
             }>
                 <div className="content">
-                    <BurgerMenu pageWrapId={"app"} right />
                     <Router>
+                        <BurgerMenu pageWrapId={"app"} right  />
                         <Header />
                         <main>
                             <App />

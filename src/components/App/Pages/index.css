@@ -2,7 +2,23 @@ section {
     padding-top: 30px;
     padding-bottom: 70px;
 }
-@media screen and (max-width: 1000px) {
+
+@media screen and (max-width: 900px) {
+    .headerText{
+        margin-top: 30px !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #intro .container .intro-item .border-star {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 900px) {
+    .iconsWithImageContainer div {
+        padding: 27px !important;
+    }
     section {
         padding: 5px 10px;
     }
@@ -337,6 +353,7 @@ p {
     color: #002c84;
     margin-bottom: 12px;
     width: 80%;
+    margin-top: 10px;
 }
 
 #admins .card-block .card-description {
@@ -411,16 +428,6 @@ p {
 #team .card-block .card img {
     width: 170px;
     height: 170px;
-}
-
-#team .card-block .card-name {
-    text-transform: uppercase;
-    text-align: center;
-    font: normal normal bold 30px/40px GHEA Grapalat;
-    letter-spacing: 0;
-    color: #002c84;
-    margin-bottom: 12px;
-    width: 80%;
 }
 
 #team .card-block .card-description {
@@ -737,6 +744,10 @@ p {
   letter-spacing: 1.4px;
   color: #4355B1;
 }
+.info-circle-text > p {
+    margin: 1em 0 0;
+}
+
 .infos-block > div {
     display: flex;
     justify-content: center;
@@ -821,9 +832,8 @@ p {
 .businessItsYou{
     position: absolute;
     right: -5%;
-    width: 304px;
-    top: 0;
-    height: 304px;
+    width: 260px;
+    top: 70px;
     animation: rotate 10s both infinite;
 }
 
@@ -868,7 +878,23 @@ p {
     margin: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
+    #admins .card-block .card-name {
+        line-height: 1.2 !important;
+    }
+    .info-circle:hover{
+        transform: rotateY(0deg);
+    }
+    .info-circle:hover .circleText {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s;
+        transform: translate(-50%, -50%) rotateY(180deg);
+    }
+    .info-circle:hover img {
+        opacity: 1;
+        visibility: visible;
+    }
     .buttons>button:hover .liknkAdd{
         color: #002c84 ;
         transition-duration: 0.2s;
@@ -901,6 +927,21 @@ p {
         width: 40% !important;
         margin: 0 !important;
         flex-direction: row-reverse !important;
+        justify-content: flex-end;
+    }
+
+    .info-circle-text-up svg {
+        margin-right: 10px;
+    }
+    .info-circle-text-up p {
+        text-align: left;
+    }
+
+    .info-circle-text svg {
+        margin-left: 10px;
+    }
+    .info-circle-text p {
+        text-align: right;
     }
 
     .infos-block-mb > div .info-circle-text-up svg {
@@ -915,9 +956,6 @@ p {
         background-image: url(../../../static/img/infos-bg-rot.svg) !important;
     }
 
-  .headerText{
-      width: 100%;
-  }
   .about-item img {
       top: 50%;
       transform: translateY(-50%);
@@ -1070,7 +1108,8 @@ height: auto !important
   transform: rotateZ(90deg);
 }
   .infos-block-mb p {
-    font-size: 12px;
+    /*font-size: 12px !important;*/
+    margin: 0 !important;
   }
   .infos-block-mb>div{
     flex-direction: row;
@@ -1096,18 +1135,14 @@ width: 100%;
   .intro-item-title-text img {
       margin-top: 50px;
   }
-    /*.sateliteStar {*/
-    /*    top: 260px !important;*/
-    /*}*/
-    /*.sateliteStar2 {*/
-    /*    top: calc(260px + 3%);*/
-    /*}*/
 }
 .card-block{
     align-items: flex-start !important;
 }
 .card h3{
-    font-family:'Montserratarm'!important;
+    margin-top: 10px;
+    text-align: center;
+    font-family:'Montserratarm' !important;
     font-size: 22px !important;
 }
 
@@ -1124,7 +1159,7 @@ width: 100%;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
     /*.infos-block:before {*/
     /*    transform: translate(-50%, -50%) rotate(90deg) scale(0.9);*/
@@ -1148,6 +1183,7 @@ width: 100%;
         padding: 0;
     }
     .intro-item-title-text {
+        padding-top: 0 !important;
         width: 100% !important;
     }
 
@@ -1169,18 +1205,18 @@ width: 100%;
     .sateliteStar {
         width: 340px !important;
         right: -175px !important;
-        top: 310px !important;
+        top: 30% !important;
     }
 
     .sateliteStar2 {
         width: 340px !important;
         right: -175px !important;
-        top: calc(310px + 2%) !important;
+        top: 32% !important;
     }
 
     .businessItsYou {
-        width: 230px !important;
-        top: 240px !important;
+        width: 150px !important;
+        top: 30% !important;
         right: 10% !important;
         /*bottom: -64px !important;*/
     }
@@ -1212,6 +1248,12 @@ width: 100%;
     width: 20%;
     min-width: 120px;
     margin: 0 20px;
+}
+
+@media screen and (max-width: 460px) {
+    .businessItsYou {
+        top: 25% !important;
+    }
 }
 
 @media screen and (max-width: 1440px) {
