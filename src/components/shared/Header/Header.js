@@ -130,7 +130,7 @@ const Header = () => {
           </NavLink>
         </div>
       </div>
-        <Select showArrow={false} defaultValue={lang} style={{ width: 80 }} onChange={handleChange}>
+        <Select showArrow={false} defaultValue={lang} style={{ width: 60 }} onChange={handleChange}>
             <Option value="am-AM" className="options">
                 Հայ
             </Option>
