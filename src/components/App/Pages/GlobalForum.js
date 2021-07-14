@@ -20,6 +20,8 @@ import icon_6 from "../../../static/img/iconhgy.svg";
 import ArmGaxaparic from "../../../static/img/biz.svg";
 import RuGaxaparic from "../../../static/img/RuGaxaparic.svg";
 import RuInchpesDarnas from "../../../static/img/RuInchpesdarnal.svg";
+import RuBusinessCircle from "../../../static/img/RusBusinesCircle.svg";
+import USBusinessCircle from "../../../static/img/UsBusinessCircle.svg";
 
 const GlobalForum = () => {
   const { lang } = useContext(Context);
@@ -103,18 +105,7 @@ const GlobalForum = () => {
                 }}
                 className="sateliteStar2"
               />
-              <img
-                src={businessItsYou}
-                className="businessItsYou"
-                alt="businessItsYou"
-                style={{
-                  position: "absolute",
-                  right: "-5%",
-                  width: "304px",
-                  top: "0",
-                  height: "304px",
-                }}
-              />
+              <img className="businessItsYou" alt="businessItsYou" src={lang === 'am-AM' ? businessItsYou : lang === 'ru-RU' ? RuBusinessCircle : USBusinessCircle} />
             </div>
             <div className="buttons">
               <button>

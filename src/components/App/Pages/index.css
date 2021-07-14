@@ -67,6 +67,7 @@ p {
     border: 3px solid #002c84;
     border-radius: 22px;
     cursor: pointer;
+    background: transparent;
 }
 .buttons button:hover{
     background-color: #002C84;
