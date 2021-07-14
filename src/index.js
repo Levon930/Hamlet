@@ -10,7 +10,7 @@ import Footer from "./components/shared/Footer/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
     const ContextApp = () => {
-        const [lang, setLang] = useState('ru-RU');
+        const [lang, setLang] = useState('am-AM');
 
         return (
             <Context.Provider value={{

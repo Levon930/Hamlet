@@ -282,7 +282,7 @@ const Community = () => {
       </section>
       <section id="team">
         <div className="team-title">
-          <div>
+          <div style={{width: lang === 'ru-RU' ? 'auto': '30%'}}>
             <img src={lang === 'am-AM' ? tim : lang === 'ru-RU' ? RuTeam : ''} />
           </div>
         </div>
