@@ -20,7 +20,7 @@ import { BrowserRouter as Router } from "react-router-dom";
             }>
                 <div className="content">
                     <Router>
-                        <BurgerMenu pageWrapId={"app"} right  />
+                        <BurgerMenu right  />
                         <Header />
                         <main>
                             <App />

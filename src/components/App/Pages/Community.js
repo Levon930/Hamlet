@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect} from "react";
 import { Context } from "../../../context";
 import localizeFilter from '../../../locale/localize.filter'
 import aboutImg from "../../../static/img/aboutImg.svg";
@@ -39,6 +39,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Community = () => {
   const { lang } = useContext(Context);
   const styleIcon = { fontSize: "25px", color: "#0B3488" };
+  let imgClassname;
+
+  useEffect(() => {
+    imgClassname = window.outerWidth <= 480 ? 'ruBusinessWidth100' : '';
+    console.log(imgClassname)
+  }, [window.outerWidth, lang])
+
   return (
     <>
       {/* <!-- INRO SECTION --> */}
@@ -54,7 +61,7 @@ const Community = () => {
             />
             <div className="intro-item-title">
               <div className="headerText">
-                <img src={lang === 'am-AM' ? ArmBusiness : lang === 'ru-RU' ? RuBusiness : UsBusiness} />
+                <img className={imgClassname} src={lang === 'am-AM' ? ArmBusiness : lang === 'ru-RU' ? RuBusiness : UsBusiness} style={{ width: lang === 'am-AM' ? '90%' : lang === 'ru-RU' ? '73%' : '100%' }} />
               </div>
               <img
                 src={satelite}
@@ -147,7 +154,7 @@ const Community = () => {
             <div style={{width: '100%'}}>
               <div className="info-circle marginLeft">
                 <div className="circleText">
-                  <p>
+                  <p className="small-font-size-2">
                     {localizeFilter(lang, 'attraction of investments content')}
                   </p>
                 </div>
@@ -161,7 +168,7 @@ const Community = () => {
             <div style={{width: '100%'}}>
               <div className="info-circle">
                 <div className="circleText">
-                  <p>
+                  <p className="small-font-size-2">
                     {localizeFilter(lang, 'formation of a business club content')}
                   </p>
                 </div>
@@ -184,7 +191,7 @@ const Community = () => {
             <div style={{width: '100%'}}>
               <div className="info-circle marginLeft">
                 <div className="circleText">
-                  <p>
+                  <p className="small-font-size">
                     {localizeFilter(lang, 'investments in innovative technologies content')}
                   </p>
                 </div>
@@ -197,7 +204,7 @@ const Community = () => {
             <div style={{width: '100%'}}>
               <div className="info-circle">
                   <div className="circleText">
-                    <p>
+                    <p className="small-font-size">
                       {localizeFilter(lang, 'stimulating brain gain content')}
                     </p>
                   </div>

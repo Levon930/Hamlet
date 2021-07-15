@@ -29,6 +29,7 @@ import buisap from "../../../static/img/Ի՞նչ_է_պետք_անելմասնա�
 import icon_6 from "../../../static/img/iconhgy.svg";
 import ArmGaxaparic from "../../../static/img/biz.svg";
 import RuGaxaparic from "../../../static/img/RuGaxaparic.svg";
+import EnGaxaparic from "../../../static/img/fromIdea.svg"
 import RuInchpesDarnas from "../../../static/img/RuInchpesdarnal.svg";
 import RuBusinessCircle from "../../../static/img/RusBusinesCircle.svg";
 import USBusinessCircle from "../../../static/img/UsBusinessCircle.svg";
@@ -89,7 +90,7 @@ const GlobalForum = () => {
                   paddingTop: "70px",
                 }}
               >
-                <img style={{ width: "100%", height: "100%" }} src={lang === 'am-AM' ? ArmGaxaparic : lang === 'ru-RU' ? RuGaxaparic : ''} />
+                <img style={{ width: "100%", height: "100%" }} src={lang === 'am-AM' ? ArmGaxaparic : lang === 'ru-RU' ? RuGaxaparic : EnGaxaparic} />
               </div>
               <img
                 src={satelite}
@@ -159,7 +160,7 @@ const GlobalForum = () => {
           </div>
         </div>
       </section>
-      <section id="buissUpHeading" style={{ alignItems: lang === 'ru-RU' && 'flex-end' }}>
+      <section id="buissUpHeading">
         <div>
           <img src={lang === 'am-AM' ? buisap : lang === 'ru-RU' ? RuInchpesDarnas : ''} />
         </div>

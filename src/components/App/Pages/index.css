@@ -1205,24 +1205,24 @@ width: 100%;
     .sateliteStar {
         width: 340px !important;
         right: -175px !important;
-        top: 30% !important;
+        top: 45% !important;
     }
 
     .sateliteStar2 {
         width: 340px !important;
         right: -175px !important;
-        top: 32% !important;
+        top: 47% !important;
     }
 
     .businessItsYou {
         width: 150px !important;
-        top: 30% !important;
-        right: 10% !important;
+        top: 42% !important;
+        right: 15% !important;
         /*bottom: -64px !important;*/
     }
 
     .intro-item-title {
-        margin-bottom: 460px;
+        margin-bottom: 250px;
     }
 
     .about-item {
@@ -1252,8 +1252,24 @@ width: 100%;
 
 @media screen and (max-width: 460px) {
     .businessItsYou {
-        top: 25% !important;
+        top: 30% !important;
     }
+    .headerText img {
+        width: 100% !important;
+    }
+
+    .intro-item-title {
+        margin-bottom: 460px;
+    }
+
+    .sateliteStar {
+        top: 30% !important;
+    }
+
+    .sateliteStar2 {
+        top: 32% !important;
+    }
+
 }
 
 @media screen and (max-width: 1440px) {
@@ -1269,4 +1285,49 @@ width: 100%;
         align-self: unset !important;
         margin: 1.68% 0 !important;
     }
+}
+
+@media screen and (max-width: 1680px) {
+    .small-font-size {
+        font-size: 9px !important;
+    }
+}
+
+@media screen and (max-width: 1530px) {
+    .small-font-size {
+        font-size: 8px !important;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .small-font-size {
+        font-size: 7px !important;
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    .small-font-size {
+        font-size: 6px !important;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .small-font-size-2 {
+        font-size: 8px !important;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .small-font-size-2 {
+        font-size: 7px !important;
+    }
+
+    .small-font-size {
+        font-size: 5.5px !important;
+    }
+}
+
+.ruBusinessWidth100 {
+    width: 100% !important;
 }

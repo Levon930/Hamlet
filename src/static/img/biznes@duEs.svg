@@ -1,1 +1,15 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737.27 409.04"><defs><style>.cls-1,.cls-2,.cls-3{isolation:isolate;}.cls-2,.cls-3{font-size:164px;font-family:SegoeUI-Bold, Segoe UI;font-weight:700;}.cls-2{fill:none;stroke:#26387d;stroke-width:4px;}.cls-3{fill:#26387d;}</style></defs><g id="Բիզնեսը_դու_ես" data-name="Բիզնեսը դու ես" class="cls-1"><text class="cls-2" transform="translate(8 147.41)">Բիզնեսը</text><text class="cls-2" transform="translate(8 336.41)">դու ես</text></g><g id="Բիզնեսը_դու_ես-2" data-name="Բիզնեսը դու ես-2" class="cls-1"><text class="cls-3" transform="translate(2 141.42)">Բիզնեսը</text><text class="cls-2" transform="translate(2 141.42)">Բիզնեսը</text><text class="cls-3" transform="translate(2 330.42)">դու ես</text><text class="cls-2" transform="translate(2 330.42)">դու ես</text></g></svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="745" height="410" viewBox="745 409.04">
+    <defs>
+        <style>.cls-1,.cls-2,.cls-3{isolation:isolate;}.cls-2,.cls-3{font-size:164px;font-family:SegoeUI-Bold, Segoe UI;font-weight:700;}.cls-2{fill:none;stroke:#26387d;stroke-width:4px;}.cls-3{fill:#26387d;}</style>
+    </defs>
+    <g id="Բիզնեսը_դու_ես" data-name="Բիզնեսը դու ես" class="cls-1">
+        <text class="cls-2" transform="translate(8 147.41)">Բիզնեսը</text>
+        <text class="cls-2" transform="translate(8 336.41)">դու ես</text>
+    </g>
+    <g id="Բիզնեսը_դու_ես-2" data-name="Բիզնեսը դու ես-2" class="cls-1">
+        <text class="cls-3" transform="translate(2 141.42)">Բիզնեսը</text>
+        <text class="cls-2" transform="translate(2 141.42)">Բիզնեսը</text>
+        <text class="cls-3" transform="translate(2 330.42)">դու ես</text>
+        <text class="cls-2" transform="translate(2 330.42)">դու ես</text>
+    </g>
+</svg>
