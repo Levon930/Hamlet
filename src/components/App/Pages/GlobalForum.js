@@ -31,6 +31,7 @@ import ArmGaxaparic from "../../../static/img/biz.svg";
 import RuGaxaparic from "../../../static/img/RuGaxaparic.svg";
 import EnGaxaparic from "../../../static/img/fromIdea.svg"
 import RuInchpesDarnas from "../../../static/img/RuInchpesdarnal.svg";
+import EnInchpesDarnal from "../../../static/img/EnInchpesDarnal.svg"
 import RuBusinessCircle from "../../../static/img/RusBusinesCircle.svg";
 import USBusinessCircle from "../../../static/img/UsBusinessCircle.svg";
 
@@ -162,7 +163,7 @@ const GlobalForum = () => {
       </section>
       <section id="buissUpHeading">
         <div>
-          <img src={lang === 'am-AM' ? buisap : lang === 'ru-RU' ? RuInchpesDarnas : ''} />
+          <img src={lang === 'am-AM' ? buisap : lang === 'ru-RU' ? RuInchpesDarnas : EnInchpesDarnal} />
         </div>
       </section>
       <section id="stepsSection" className="stepsSection-mb">
