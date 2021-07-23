@@ -852,7 +852,17 @@ p {
     to {
       transform: rotateZ(360deg);
     }
-  }
+}
+
+@keyframes rotate460 {
+    from {
+        transform: translateX(50%) rotateZ(0);
+    }
+
+    to {
+        transform: translateX(50%) rotateZ(360deg);
+    }
+}
 /*@keyframes coin-rotate {*/
 /*  from {*/
 /*    transform: rotateY(0);*/
@@ -1252,22 +1262,27 @@ width: 100%;
 
 @media screen and (max-width: 460px) {
     .businessItsYou {
-        top: 30% !important;
+        width: 120px !important;
+        top: 28% !important;
+        right: 50% !important;
+        animation: rotate460 10s both infinite !important;
     }
     .headerText img {
         width: 100% !important;
     }
 
     .intro-item-title {
-        margin-bottom: 460px;
+        margin-bottom: 300px;
     }
 
     .sateliteStar {
-        top: 30% !important;
+        width: 310px !important;
+        top: 18% !important;
     }
 
     .sateliteStar2 {
-        top: 32% !important;
+        width: 310px !important;
+        top: 20% !important;
     }
 
 }
